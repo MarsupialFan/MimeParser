@@ -1,0 +1,26 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: /sowewhere/over/the/ocean
+Subject:
+Date: Thu, 28 Dec 2023 22:39:41 -0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--XwDd6Cl3BJaRDRFI13GHpduqRXZzE0eOeGh8aB0kDz----"
+
+
+------MultipartBoundary--XwDd6Cl3BJaRDRFI13GHpduqRXZzE0eOeGh8aB0kDz----
+Content-Type: text/html
+Content-ID: <frame-A3074B03B8C4EADA5B9A783B101CB0B5@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: /in/a/galaxy/far/far/away
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3Dwindows-1252"></head><body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+
+
+</body></html>
+------MultipartBoundary--XwDd6Cl3BJaRDRFI13GHpduqRXZzE0eOeGh8aB0kDz------

@@ -1,0 +1,12 @@
+From: Jane Doe <jane@doe.com>
+Subject: Simple Test Message
+To: John Doe <john@doe.com>
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain;
+	charset=us-ascii
+Mime-Version: 1.0 (Mac OS X Mail 11.1 \(3445.4.7\))
+X-Mailer: Apple Mail (2.3445.4.7)
+X-MIMETrack: Itemize by SMTP Server on doe/DOE(Doe) at
+ 1/17/2020 12:34:56 AM
+
+Simple Test Message

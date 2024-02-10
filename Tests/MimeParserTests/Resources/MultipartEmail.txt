@@ -1,0 +1,3424 @@
+Delivered-To: john@doe.com
+Received: by 2002:a05:7412:d506:b0:fa:6a67:6344 with SMTP id da6csp608853rdb;
+        Tue, 23 Jan 2024 09:05:29 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHEuOvrs2lOj6IiAZt40xVhWJfdXPDY3JybPehTZL2q0ygTqyQF6qxGSrvmMGsQ1bJqOFeQ
+X-Received: by 2002:ad4:5ec5:0:b0:686:1cff:676e with SMTP id jm5-20020ad45ec5000000b006861cff676emr1290538qvb.28.1706029528720;
+        Tue, 23 Jan 2024 09:05:28 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706029528; cv=none;
+        d=google.com; s=arc-20160816;
+        b=nYCV5omAgfIW9SG5/g1TW1oO+ysBOp8WFTB3SK8LOACOSI9c0EWJkbwmHY7RgLRvrT
+         K2PuWQhllkbcFcY24r9Mb+M5WIraC1i0T2VUsnhM7hZB8UItbvzTSh+ssORFS0D24ySq
+         CijQVq0m9PK5cmpmZxaKG6C2VGv6BjKcM+nWJAVtou4fWhHRzltIkIv5prqWRNBNyrfT
+         sJ0BA/gcUsnfBe4KwSL6lu8UfG+GJ94IhkG8dVWbe9U16vUU+HPuWEQmZ8i9wNO1fz1z
+         itTAtg990zhOgcKUHo20Dp/MSRqJuFbgBB7n7Jw/AbfbBntlFWRnQoJvNbmEXJdkSa/S
+         nRtw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from
+         :date:dkim-signature:dkim-signature;
+        bh=Sv8eVXZbejOX7CgDYrxu2OF3/xiErYK6kJThvoGgNJo=;
+        fh=abgQ4+Cip3cW/PX29wNr5Ir3u5vrK8ymKFbQWqWNSs4=;
+        b=UAU5njAOKlPt4D+oFuk1TrX5dwJHlKviFf+4so28TJMMW1HhiD0OYsWTvLI4BTMI0r
+         jhPejjhi3VYd6T2IPR7sxGKNvkTHmqgxvVZU9bYkhJWiEnZwKhsoTQZZ6remYDuExA6I
+         I07x03pDAosBV9Y2MfGbBMFhDiTHoOlcCwbleTv1/ecsbMm7sZJcHIP0/4fO6MsfRnt1
+         7PlNAhg7FeSnk4MAKa7NKcEl5nwk49/Qt/Xo/zLGaIqGjEVaIUBQ/+3Z3xIbhJ3VsL/l
+         Xrn5lRwrsGND9ABHJUh8nFtWq8NZt2od8DROITyYmDNlg6RfVeQ8axbtCrn/doswZ2AS
+         MDFw==
+X-MSFBL: waV7h5lH/gztGYnknyJxWc71Mct9WB85BXcMz+X296M=|eyJiIjoiZHZwLTE5Mi0 yOC0xNDUtNDMiLCJyIjoib2Zlci5hZGlAZ21haWwuY29tIiwiZyI6ImJnLWFiZC0 5ODciLCJ1IjoiMzgyLUpaQi03OTg6MDoyMzE5NDo2NTk4NToxMTQzMjA6MjM0MjA 6OTo0MDU2MTozNTc1NiJ9
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1706029472; s=mkto; d=a16z.com; i=@a16z.com; h=Content-Type:MIME-Version:Subject:To:From:Date; bh=Sv8eVXZbejOX7CgDYrxu2OF3/xiErYK6kJThvoGgNJo=; b=BbrRRRhGp/pMBrjAgMtDUDhtKsfmlxboF8pywDN8vKiciZKt/36PwZ5/wPhxzkL5 yt2kkkIR3dtHcNwH63jvSrDpux/2+TnMCaocBIBTtEpEoou/leX95kEbRBxrUsMyQSt 5ClykB3u5V3UpeRi0kCieICHbOlOXYkz9+jYiCLk=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1706029472; s=m1; d=mktdns.com; i=@mktdns.com; h=Content-Type:MIME-Version:Subject:To:From:Date; bh=Sv8eVXZbejOX7CgDYrxu2OF3/xiErYK6kJThvoGgNJo=; b=kcJiNGa3bDZbkuge6fENKnIcfXRk8Zt6jIxsLRKSrBoDEWvOmzyjaCxo+ig3Mb+o 26u/SG1IgyVkzCDKFVyVda+mWg+ryTH6A5etCf/JSmfxSocxbf0ibiv1OJpYGhECydo EHUPHlyL0n+VtdnHgGrkTc3QCvxhGLP2fc+EZInY=
+Date: Tue, 23 Jan 2024 11:04:32 -0600 (CST)
+From: Jane Doe <jame@doe.com>
+To: john@doe.com
+Message-ID: <716184816.158537929.1706029472287@abmktmail-batch1l.marketo.org>
+Subject: Politics and the future
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_Part_158537928_1005536392.1706029472285"
+X-Binding: bg-abd-987
+X-MarketoID: 382-JZB-798:0:23194:65985:114320:23420:9:40561:35756
+X-MktArchive: false
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_158537928_1005536392.1706029472285
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+View Online <[[https://go2.a16z.com/v/MzgyLUpaQi03OTgAAAGQ1kCKD_eVefLbAbhFo=
+_7U06UNR8eSYKsfdhLvopE5Ic98uEehmEc7nHG8ZdGKScVtcfgks3A=3D]]>
+Not a subscriber yet? Sign up here <https://go2.a16z.com/MzgyLUpaQi03OTgAAA=
+GQ1kCKD2wpct0Y6iMsB6pMTvqUXUSVlu3_xACpkB2ukkKhR1sci5PbB90QDiyyKct4rF_TOxI=
+=3D>.
+
+Politics and the Future <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD8Pwb=
+XvrLoux-zq-6Hl19FoX4nM2DGy05-rhr941RHZjkw2GPRw_ueVbZ-JD2iEo0EM=3D>
+by Ben Horowitz
+
+As software has eaten the world, it has become integral to every industry a=
+nd nearly every endeavor in our society. As a result, the governments aroun=
+d the world have become increasingly interested in the implications and how=
+ they might regulate the technology.=20
+
+We believe that advancing technology is critical for humanity=E2=80=99s fut=
+ure, so we will, for the first time, get involved with politics by supporti=
+ng candidates who align with our vision and values specifically for technol=
+ogy.=20
+
+Read now =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD8PwbXvrLoux-=
+zq-6Hl19FoX4nM2DGy05-rhr941RHZjkw2GPRw_ueVbZ-JD2iEo0EM=3D>
+
+Unbundling the Game Engine: The Rise of Next Generation 3D Creation Engines=
+ <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD9bI-fW6tgssFMhtbyRLV2YcMI8l=
+-s0xNVZr0-841bCusNjiy0txIqX7ATFGtczWOmY=3D>
+by Troy Kirwin and Jonathan Lai
+
+There is a unique window of opportunity today for a new 3D Creation Engine =
+(aka game engine) to revolutionize the way we create games, film, virtual w=
+orlds, and simulations.=20
+
+Unity, Unreal, Roblox and Godot =E2=80=94 the predominant 3D engines =E2=80=
+=94 are all 15+ year old technologies architected for a different era of co=
+mputing. The emergence of generative AI, cloud computing, and new spatial p=
+latforms is poised to disrupt 3D creation end-to-end.=20
+
+This article lays out the history of game engines, and discusses what a nex=
+t generation 3D game engine looks like and what this means for the industry=
+ going forward.
+
+Read now =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD9bI-fW6tgssF=
+MhtbyRLV2YcMI8l-s0xNVZr0-841bCusNjiy0txIqX7ATFGtczWOmY=3D>
+
+A Few of the Things We=E2=80=99re Excited About in Crypto for 2024 <https:/=
+/go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD05iPCixgD8OA3ReMGpbTqsdwRRTHoFrXcops=
+f010ifMZw_sySO_njzZGQ2c3wx8KGs=3D>
+by Andrew Hall, Miles Jennings, Scott Duke Kominers, Eddy Lazzarin, Daren M=
+atsuoka, Sam Ragsdale, karma (Daniel Reynaud), Arianna Simpson, Carra Wu, a=
+nd Ali Yahya
+
+From the increasing importance of decentralization and the rise of modular =
+tech in the open source tech stack, to passkeys that reset the UX of the fu=
+ture, these are just a few things that a16z crypto team members are excited=
+ about this year.
+
+Read now =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD05iPCixgD8OA=
+3ReMGpbTqsdwRRTHoFrXcopsf010ifMZw_sySO_njzZGQ2c3wx8KGs=3D>
+
+Marketplaces in the Age of AI <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kC=
+KD8ozg_BeufpjLg8QjeBSrs3ymR_xwqH_i-ueOVA8isWXq8Tq6qghBBO6qoG5iKiyj58=3D>
+by Olivia Moore
+
+While the marketplace business model is evergreen, every new platform chang=
+es how and where transactions happen. The internet took us from classifieds=
+ and poster boards to sites like Amazon, eBay, and Craigslist, while mobile=
+ enabled apps like DoorDash, Uber, and Instacart.=20
+
+Now, we believe generative AI promises to revolutionize marketplaces again.=
+ It will not only transform how products and services are sold =E2=80=94 bu=
+t also how they are made.
+
+Read now =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD8ozg_BeufpjL=
+g8QjeBSrs3ymR_xwqH_i-ueOVA8isWXq8Tq6qghBBO6qoG5iKiyj58=3D>
+
+Underestimating AI in Healthcare <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ=
+1kCKD-GcD7DeSSZ3hUlOTk_TrtTKB874w2JcIeaWsR6eHN75fYCD78Ntei29MdwgJdEJ0j8=3D>
+by Daisy Wolf, Adela Tomsejova, Jay Rughani, and Vijay Pande
+
+Over the past half century, Wall Street was completely revolutionized by co=
+mputers. Now, AI is about to bring a similar revolution to healthcare.=20
+
+Over the next few decades, at least half of the $4.3 trillion dollar Americ=
+an healthcare industry will be AI-driven =E2=80=94 and the markets are sign=
+ificantly undervaluing this opportunity.
+
+Read more =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD-GcD7DeSSZ3=
+hUlOTk_TrtTKB874w2JcIeaWsR6eHN75fYCD78Ntei29MdwgJdEJ0j8=3D>
+
+From Bacteria to Bedside: The Arrival of CRISPR Medicine <https://go2.a16z.=
+com/MzgyLUpaQi03OTgAAAGQ1kCKD1UCZCkWAYXI9V55fulBBZrVxIATm7S7iVkaEkOtDeis1ti=
+uEtHxxAx-xu-RCmOHuiM=3D>
+by Jorge Conde and Kris Tatiossian
+
+Originally discovered in bacteria, CRISPR <https://go2.a16z.com/MzgyLUpaQi0=
+3OTgAAAGQ1kCKDwC_i7oYKXHWFQIQ8AxJ12snIgkdXHlgTt6fW_-Bm4m2IEaDL_8_KbM6uL08z6=
+ionFs=3D> quickly became the workhorse gene-editing system underlying the n=
+ext generation of programmable medicines <https://go2.a16z.com/MzgyLUpaQi03=
+OTgAAAGQ1kCKDoA3ATYRg-Wc7cANguEYX5eIoXMkXiaM6nUM1Egpo5mxO3D-gJtV3IJpDiAvR0C=
+yk2g=3D>. Last month=E2=80=99s landmark approval <https://go2.a16z.com/Mzgy=
+LUpaQi03OTgAAAGQ1kCKD627MiaM-nIBWn7hFaol3Kvlazu5aS4bhBtvE7GT-Ln_5Kxzc9SwSR7=
+iS_VSLgqRT4c=3D> by the US Food and Drug Administration of Vertex Pharmaceu=
+ticals=E2=80=99 and CRISPR Therapeutics=E2=80=99 Casgevy, the world=E2=80=
+=99s first CRISPR-based treatment, marks a groundbreaking shift in how we t=
+ackle intractable diseases.=20
+
+And it=E2=80=99s a milestone barely a decade in the making: the original pu=
+blications describing <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD4Rno_B=
+r3QXjqmWdTJR-7zAmKUR_wIovwJxdxgb7Y6zWonujPiVSqN4lC4JQNG3iyLY=3D> CRISPR=E2=
+=80=99s potential date back to 2012. Since then, CRISPR has transitioned fr=
+om being a bacterial protein to a gene-editing tool, earned <https://go2.a1=
+6z.com/MzgyLUpaQi03OTgAAAGQ1kCKDxa1dYKpZgHwKE0T07iX5D0Fcn69vkqoKSW3ECJYUaBh=
+XmzT6zEgRq-gaPvxxlZTzZ8=3D> a Nobel Prize, and is now an FDA-approved medic=
+ine.
+
+Read=C2=A0now =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD1UCZCkW=
+AYXI9V55fulBBZrVxIATm7S7iVkaEkOtDeis1tiuEtHxxAx-xu-RCmOHuiM=3D>
+
+The New Drug Delivery Challenge: How Will Cures Reach Patients? <https://go=
+2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD8E25tgihNCkyYJmWaHmv6KcEgziWOsfybFWU3Nb=
+FPd1XKyb0bWlbdhu9c6g_mNCQXs=3D>
+by Jay Rughani, Annie Collins, Jorge Conde, and Julie Yoo
+
+Our current healthcare delivery and insurance system =E2=80=94 both private=
+ and public =E2=80=94 is not designed to be able to pay for or distribute m=
+edications at scale.=20
+
+This leaves patients exposed to high prices and confusing logistics, provid=
+ers without infrastructure to support those patients through their care jou=
+rneys, payors facing unsustainable economics, and manufacturers with uncert=
+ainty around the distribution of their impactful products.=20
+
+And yet, these drugs are being developed more rapidly than ever. It=E2=80=
+=99s time to figure out how to access, pay for, and deliver curative therap=
+ies (amongst other high-cost, complex, specialty drugs), at scale.
+
+Read=C2=A0now =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD8E25tgi=
+hNCkyYJmWaHmv6KcEgziWOsfybFWU3NbFPd1XKyb0bWlbdhu9c6g_mNCQXs=3D>
+
+How to Think of R&D Spend <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD1D=
+QrHT4_PlYAl1QyWL9eUsJq4sfBk6OIMM097MEIogfepZzGiuMyBqYiDGwmSNa2Qw=3D>
+by David George
+
+Capital allocation is a core part of any CEO=E2=80=99s job, and it=E2=80=99=
+s particularly critical for growth-stage CEOs. After all, once your company=
+ goes public, you=E2=80=99ll be expected to justify every dollar you spend.=
+=20
+
+Many growth-stage CEOs know how to efficiently allocate capital in every pa=
+rt of their budget with one glaring exception: research and development (R&=
+D).
+
+Read=C2=A0now =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD1DQrHT4=
+_PlYAl1QyWL9eUsJq4sfBk6OIMM097MEIogfepZzGiuMyBqYiDGwmSNa2Qw=3D>
+
+Books, Shows, Apps: Some Recommendations <https://go2.a16z.com/MzgyLUpaQi03=
+OTgAAAGQ1kCKDxcXWFTRULuhGRbHfoh7e9cE3DTlbt-wEj7ovl9eptGkD6OKaM55xyDY6-o3YGY=
+dZ1I=3D>
+by a16z crypto team
+
+In the spirit of sharing what we=E2=80=99re reading =E2=80=94 a regular tra=
+dition around here; see our winter 2023 list of books, games, movies, and m=
+ore <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD63cc-Tc42CKF5-Fzp5G3hMiV=
+J4YVH-eUxEOMjfeAQPT0EEtwVZq9f5dzM3lV7NqJAQ=3D> as well as many other past i=
+nstallments with evergreen recs =E2=80=94 here are some of the books recent=
+ly curated for the second annual a16z crypto Founder Summit <https://go2.a1=
+6z.com/MzgyLUpaQi03OTgAAAGQ1kCKD9GYFChAq8HcaAP63hZm4FBxcBPNpy7MErbp9wnxusu9=
+F3-1ZQ87jCRQpcA4WSdl4Do=3D>.=20
+
+These recommendations are not just for crypto founders =E2=80=94 the list s=
+pans biographies to company building and organizational history and the pro=
+cess of innovation to creative inspiration and science fiction. There=E2=80=
+=99s something for everyone!
+Read now =C2=BB <[[<[[https://a16zcrypto.com/posts/listicles/reading-watchi=
+ng-playing-list-winter-2023/]]>
+
+Overages: The Overlooked Problem in Usage-based Pricing (and How to Fix It)=
+  <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKELq-F49n8ahFU7nJd87M7O-h5yx=
+95oA2Gl205_B1v-C2cvx_K1ULNLLOj2s_EcbBPZo=3D>
+by Joe Morrissey
+
+GTM leaders often hit their customers with overages as a way to get those c=
+ustomers to commit to higher spends up front =E2=80=94 which gives the vend=
+or more predictable revenue streams and a reliable way to upsell existing a=
+ccounts.=20
+
+While some usage-based businesses might need to use overages as a stick to =
+get more cash upfront, many others can actually generate more revenue by re=
+moving that friction and tiering pricing for how their customers want to co=
+nsume.
+Read now =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKELq-F49n8ahFU=
+7nJd87M7O-h5yx95oA2Gl205_B1v-C2cvx_K1ULNLLOj2s_EcbBPZo=3D>
+
+Podcasts:
+
+The Future of Longevity with Tony Robbins <https://go2.a16z.com/MzgyLUpaQi0=
+3OTgAAAGQ1kCKDyO00Vqwc4xYbShoPfpTF6E6l5-YDfEJblG5LY3oWrovfG2QGcdFnEWorb-fH2=
+t5XvQ=3D>
+with Marc Andreessen, Ben Horowitz, and Tony Robbins
+
+In this episode of The Marc and Ben Show, special guest Tony Robbins joins =
+Marc and Ben, as well as a16z Bio + Health General Partner Vijay Pande, to =
+discuss the future of longevity.
+
+They discuss new breakthroughs in regenerative medicine, AI, biohacking, ge=
+ne editing, and mindset =E2=80=94 and confirm why this might be the best ti=
+me to be alive.
+
+Listen now =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDyO00Vqwc4x=
+YbShoPfpTF6E6l5-YDfEJblG5LY3oWrovfG2QGcdFnEWorb-fH2t5XvQ=3D>
+
+IRA, AI Regulation, and the Future <https://go2.a16z.com/MzgyLUpaQi03OTgAAA=
+GQ1kCKDxO6ZnCY61fgBbJeBgpUIKhCQH30RVF9HsywyDgbBVKld388r6Qhs2qOj2rbSC99jyw=
+=3D>
+with Vijay Pande, Kris Tatiossian, and Olivia Webb
+
+In this episode, Joe Grogan, a senior fellow at the Leonard D. Schaeffer Ce=
+nter for Health Policy and Economics and a former senior government officia=
+l, joins Vijay Pande to discuss all things regulation.
+
+Together, they dive into Joe=E2=80=99s experience working in the early days=
+ of the Covid pandemic, how he thinks about the Inflation Reduction Act=E2=
+=80=99s effect on pharmaceutical R&D, and the future of AI regulation.
+
+Listen now =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDxO6ZnCY61f=
+gBbJeBgpUIKhCQH30RVF9HsywyDgbBVKld388r6Qhs2qOj2rbSC99jyw=3D>
+
+My First 16: Launching a New Category with Modern Treasury=E2=80=99s Dimitr=
+i Dadiomov <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD5TzvLVpcUvxztIzr8=
+55gq1zZRSe5EL39tcOG2e_dS2vL0LaMUIPhA2cIvZNfxWCK14=3D>
+with Seema Amble and Dimitri Dadiomov
+
+Our new video podcast series My First 16 <https://go2.a16z.com/MzgyLUpaQi03=
+OTgAAAGQ1kCKD2G7igF4lzvOUsCnK7bwis9PS_b1hEb5UN_W9EQ7SYlu1uRNjgN5fJbhZIx43KD=
+x3xk=3D> features interviews with founders and CEOs of fintech companies ab=
+out how they acquired their initial customers and the hard lessons they lea=
+rned along the way.
+
+In this episode, a16z partner Seema Amble talks with Dimitri Dadiomov, the =
+co-founder and CEO of payment operations platform Modern Treasury, about th=
+e challenges of creating a new category, hiring for marketing before you hi=
+re for sales, and why developing new features is similar to birding.
+
+Listen now =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD5TzvLVpcUv=
+xztIzr855gq1zZRSe5EL39tcOG2e_dS2vL0LaMUIPhA2cIvZNfxWCK14=3D>
+
+Investments and announcements:
+
+Announcing Our Latest Open Source AI Grants <https://go2.a16z.com/MzgyLUpaQ=
+i03OTgAAAGQ1kCKD6548tKTv2x4f-3LRVB33F5_o6rfiOnQ0ga-HZa7CLVM-9zzyRngbkt5Es5v=
+283vLdE=3D>
+by Matt Bornstein and Rajko Radovanovic
+We=E2=80=99re excited to announce the second batch of a16z Open Source AI G=
+rant recipients. This program is designed to support a thriving open source=
+ ecosystem around modern AI.
+
+This cohort focuses mainly on two areas: tools for training, hosting, and e=
+valuating language models; and models and communities built around visual A=
+I. This complements many of the language model fine-tuning projects include=
+d in the first batch =E2=80=94 more information about the program and a lis=
+t of prior recipients is available here <https://go2.a16z.com/MzgyLUpaQi03O=
+TgAAAGQ1kCKD6548tKTv2x4f-3LRVB33F5_o6rfiOnQ0ga-HZa7CLVM-9zzyRngbkt5Es5v283v=
+LdE=3D>.
+Read now =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD6548tKTv2x4f=
+-3LRVB33F5_o6rfiOnQ0ga-HZa7CLVM-9zzyRngbkt5Es5v283vLdE=3D>
+
+Investing in Mistral <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD9RwOc3k=
+tsvf-fRac1J8UGwQScGaY6XVf0enro6hbXmx6qeBs1nbW3YOCz5iBcT2kco=3D>
+by Anjney Midha, Matt Bornstein, and Rajko Radovanovic
+Mistral AI builds fast, open-source, and secure language models.
+Read=C2=A0more =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD9RwOc3=
+ktsvf-fRac1J8UGwQScGaY6XVf0enro6hbXmx6qeBs1nbW3YOCz5iBcT2kco=3D>
+
+Investing in Quora and Poe <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDz=
+dYVwYTEDRHIr_EappVkOmLzsSeGoFWynFqRQCBbHntUWrBsAZMM91z6MziQvwtsuo=3D>
+by David George
+Poe aims to be the best way for consumers to interact with a variety of AI =
+products in the same workflow and be the easiest way for developers to buil=
+d a multi-modal AI products to reach a mass audience, whether prompting an =
+existing model to create a bot or training a model themselves.
+Read=C2=A0more =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDzdYVwY=
+TEDRHIr_EappVkOmLzsSeGoFWynFqRQCBbHntUWrBsAZMM91z6MziQvwtsuo=3D>
+
+Investing in Luma AI <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKEIEf1N5K=
+Q4U30Q0jIjvydTg7gut1yozZ3ZLCueLdXT1TpyyoexMo_mFn4IFGMw3c5nQ=3D>
+by Anjney Midha and Rajko Radovanovic
+Luma AI is building fast, high-quality, and deployable foundation models.
+Read=C2=A0more =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKEIEf1N5=
+KQ4U30Q0jIjvydTg7gut1yozZ3ZLCueLdXT1TpyyoexMo_mFn4IFGMw3c5nQ=3D>
+
+Investing in Air Space Intelligence <https://go2.a16z.com/MzgyLUpaQi03OTgAA=
+AGQ1kCKD9JRhGIVnruakbnWebTiWL-qTYdmkb7tdfsplEpwVGzZwQWix83Q26cHB68VIhXI_zw=
+=3D>
+by David Ulevitch
+Air Space Intelligence is a modern aerospace company addressing the softwar=
+e crisis in aerospace in both the enterprise and government sectors.
+Read=C2=A0more =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD9JRhGI=
+VnruakbnWebTiWL-qTYdmkb7tdfsplEpwVGzZwQWix83Q26cHB68VIhXI_zw=3D>
+
+Investing in Tome Biosciences <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kC=
+KD0YNQXAvFbhqm7Op6i8byxcoiD7WFea96EHsP3_EukqbzttzCzMlI2rhSZ6FF8bGZrA=3D>
+by Jorge Conde
+Tome Biosciences is a programmable genomic integration (PGI) company.
+Read=C2=A0more =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD0YNQXA=
+vFbhqm7Op6i8byxcoiD7WFea96EHsP3_EukqbzttzCzMlI2rhSZ6FF8bGZrA=3D>
+
+Investing in Distributional <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD=
+xOeQy264K1TcSm9qOM61PzrDERLDOenAzdNUQcXWRM-Nd5CNZiRSO2mIoF7OlO2qXM=3D>
+by Martin Casado and Matt Bornstein
+Distributional is building a platform for robust and repeatable testing of =
+AI and machine learning models.
+Read=C2=A0more =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDxOeQy2=
+64K1TcSm9qOM61PzrDERLDOenAzdNUQcXWRM-Nd5CNZiRSO2mIoF7OlO2qXM=3D>
+
+Investing (again) in Dynamic Labs <https://go2.a16z.com/MzgyLUpaQi03OTgAAAG=
+Q1kCKD6m4u91qvGZVzDOjz2gQO4zqBvzhcUfDaoomKCs8nXXPpJKNQCkYjccDruW6l9HybnY=3D=
+>
+by Arianna Simpson
+Dynamic Labs helps developers create wallet-based login, onboarding, and au=
+thentication flows, allowing them to focus on their core product.
+Read=C2=A0more =C2=BB <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD6m4u91=
+qvGZVzDOjz2gQO4zqBvzhcUfDaoomKCs8nXXPpJKNQCkYjccDruW6l9HybnY=3D>
+
+You are receiving this newsletter since you opted in earlier; if you would =
+like to opt out of future newsletters, you can unsubscribe immediately.=20
+
+This newsletter is provided for informational purposes only, and should not=
+ be relied upon as legal, business, investment, or tax advice. You should c=
+onsult your own advisers as to those matters. This newsletter may link to o=
+ther websites and certain information contained herein has been obtained fr=
+om third-party sources. While taken from sources believed to be reliable, a=
+16z has not independently verified such information and makes no representa=
+tions about the enduring accuracy of the information or its appropriateness=
+ for a given situation.=20
+
+References to any companies, securities, or digital assets are for illustra=
+tive purposes only and do not constitute an investment recommendation or of=
+fer to provide investment advisory services. Furthermore, this content is n=
+ot directed at nor intended for use by any investors or prospective investo=
+rs, and may not under any circumstances be relied upon when making a decisi=
+on to invest in any fund managed by a16z. (An offering to invest in an a16z=
+ fund will be made only by the private placement memorandum, subscription a=
+greement, and other relevant documentation of any such fund which should be=
+ read in their entirety.) Past performance is not indicative of future resu=
+lts.=20
+
+Charts and graphs provided within are for informational purposes solely and=
+ should not be relied upon when making any investment decision. Content in =
+this newsletter speaks only as of the date indicated. Any projections, esti=
+mates, forecasts, targets, prospects and/or opinions expressed in these mat=
+erials are subject to change without notice and may differ or be contrary t=
+o opinions expressed by others. Please see a16z.com/disclosures <https://go=
+2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD5E4b5EDuZiKzoJ5mYhQxkoZc3yqglR7BWBOqEME=
+gbaLmWQ-NPp8xu8_OSt3bYdNPmA=3D> for additional important details.
+
+Software Is Eating The World
+
+MENLO PARK
+2865 Sand Hill Road, Suite 101=20
+Menlo Park, CA 94025
+
+MIAMI
+2340 Collins Ave, Ste 502
+Miami Beach, FL 33139
+
+NEW YORK CITY
+200 Lafayette Street, Third Floor
+New York, NY 10012
+
+SAN FRANCISCO
+180 Townsend Street
+San Francisco, CA 94107
+
+2024 Andreessen Horowitz. All rights reserved.
+Update email preferences <https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD6Yy=
+qFV-9rD1ZlWz1yLY5SQsu6YWymdEO9zi7236BBlWW16tU2bFeba4V7KmCUB3_Ts=3D>
+Unsubscribe from list <[[https://info.a16z.com/UnsubscribePage.html?mkt_uns=
+ubscribe=3D1&mkt_tok=3DMzgyLUpaQi03OTgAAAGQ1kCKEC74E3h3IuVO8cTOeKKn9hnB3c87=
+HGUMDIqMjeDRzYSiG9JGavcb5zRIbwWEE-CZXZcjRo30yXphGFWm-uuYdqtHq5DjVHjfaxkCEw]=
+]>
+
+------=_Part_158537928_1005536392.1706029472285
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:sch=
+emas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office"=
+>
+<head>=20
+<!-- Marketo Variable Definitions -->                                   =20
+<!-- Background variables -->                                              =
+                                                                           =
+               =20
+<!-- Separator height variables -->                                        =
+                         =20
+<!-- Other Meta Tags -->=20
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" />=
+=20
+<meta content=3D"telephone=3Dno" name=3D"format-detection" />=20
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0" />=20
+<style type=3D"text/css">
+=09=09@font-face {
+=09=09=09font-family: 'Proxima Nova';
+=09=09=09src: url('https://info.a16z.com/rs/382-JZB-798/images/ProximaNova-=
+Regular.woff2') format('woff2'),
+=09=09=09url('https://info.a16z.com/rs/382-JZB-798/images/ProximaNova-Regul=
+ar.woff') format('woff');
+=09=09=09font-weight: 400;
+=09=09=09font-style: normal;
+=09=09}
+=09=09@font-face {
+=09=09=09font-family: 'Proxima Nova';
+=09=09=09src: url('https://info.a16z.com/rs/382-JZB-798/images/ProximaNova-=
+RegularIt--09-01-020.woff2') format('woff2'),
+=09=09=09url('https://info.a16z.com/rs/382-JZB-798/images/ProximaNova-Regul=
+arIt--09-01-020.woff') format('woff');
+=09=09=09font-weight: 400;
+=09=09=09font-style: italic;
+=09=09}
+
+=09=09@font-face {
+=09=09=09font-family: 'Proxima Nova';
+=09=09=09src: url('https://info.a16z.com/rs/382-JZB-798/images/ProximaNova-=
+Medium--09-01-020.woff2') format('woff2'),
+=09=09=09url('https://info.a16z.com/rs/382-JZB-798/images/ProximaNova-Mediu=
+m--09-01-020.woff') format('woff');
+=09=09=09font-weight: 500;
+=09=09=09font-style: normal;
+=09=09}
+
+=09=09@font-face {
+=09=09=09font-family: 'Proxima Nova';
+=09=09=09src: url('https://info.a16z.com/rs/382-JZB-798/images/ProximaNova-=
+Semibold--09-01-020.woff2') format('woff2'),
+=09=09=09url('https://info.a16z.com/rs/382-JZB-798/images/ProximaNova-Semib=
+old--09-01-020.woff') format('woff');
+=09=09=09font-weight: 600;
+=09=09=09font-style: normal;
+=09=09}
+
+=09=09@font-face {
+=09=09=09font-family: 'Proxima Nova';
+=09=09=09src: url('https://info.a16z.com/rs/382-JZB-798/images/ProximaNova-=
+Bold--09-01-020.woff2') format('woff2'),
+=09=09=09url('https://info.a16z.com/rs/382-JZB-798/images/ProximaNova-Bold-=
+-09-01-020.woff') format('woff');
+=09=09=09font-weight: 700;
+=09=09=09font-style: normal;
+=09=09}
+=09=09@font-face {
+=09=09=09font-family: 'Proxima Nova';
+=09=09=09src: url('https://info.a16z.com/rs/382-JZB-798/images/ProximaNova-=
+BoldIt--09-01-020.woff2') format('woff2'),
+=09=09=09url('https://info.a16z.com/rs/382-JZB-798/images/ProximaNova-BoldI=
+t--09-01-020.woff') format('woff');
+=09=09=09font-weight: 700;
+=09=09=09font-style: italic;
+=09=09}
+=09=09a{
+=09=09=09outline:none;
+=09=09=09text-decoration:underline;
+=09=09=09-webkit-transition:all 0.2s ease;
+=09=09=09-moz-transition:all 0.2s ease;
+=09=09=09-ms-transition:all 0.2s ease;
+=09=09=09transition:all 0.2s ease;
+=09=09=09text-decoration: none;
+=09=09}
+=09=09a:hover,
+=09=09a:focus { opacity: 0.8; }
+=09=09a[x-apple-data-detectors]{color:inherit !important; text-decoration:n=
+one !important;}
+=09=09a img{border:none;}
+=09=09.long-word-td {
+=09=09=09word-break: break-all;
+=09=09=09overflow-wrap: break-word;
+=09=09=09line-break: anywhere;
+=09=09=09word-break:inherit !important;
+=09=09}
+=09=09.long-word a {
+=09=09=09line-break: anywhere;
+=09=09=09word-break: break-all;
+=09=09=09word-wrap: break-word;
+=09=09=09overflow-wrap: break-word;
+=09=09}
+=09=09.button {
+=09=09=09-webkit-transition:all 0.3s ease;
+=09=09=09-moz-transition:all 0.3s ease;
+=09=09=09-ms-transition:all 0.3s ease;
+=09=09=09transition:all 0.3s ease;
+=09=09=09word-break: break-all;
+=09=09}
+=09=09.button:hover { opacity: 0.8; }
+=09=09table td{mso-line-height-rule:exactly;}
+=09=09.ExternalClass, .ExternalClass a, .ExternalClass span, .ExternalClass=
+ b, .ExternalClass br, .ExternalClass p, .ExternalClass div{line-height:inh=
+erit;}
+=09=09.address,
+=09=09.date { color: #35353a !important; background: none !important; text-=
+decoration: none !important;}
+=09=09.address span,
+=09=09.address *,
+=09=09.date span,
+=09=09.date * { color: #35353a !important; text-decoration: none !important=
+; border:none !important; background: none !important;}
+=09=09img { max-width: 100%; height: auto; }
+=09=09ul,
+=09=09ol {
+=09=09=09padding-left: 23px;
+=09=09=09margin-top: 0;
+=09=09=09padding-top: 13px;
+=09=09=09padding-bottom: 0;
+=09=09}
+=09=09ul { list-style-type: disc; }
+=09=09ul li,
+=09=09ol li { margin-bottom: 6px; }
+
+=09=09p { padding-top: 0 !important; padding-bottom: 0 !important; margin-t=
+op: 0 !important; margin-bottom: 0 !important; }
+=09=09p + p { margin-top: 10px !important; }
+
+=09=09img + div { display:none !important; width:0 !important; height:0 !im=
+portant; padding:0 !important; font-size:0 !important; line-height:0 !impor=
+tant; }
+
+=09=09.hide-everywhere { display:none !important; width:0 !important; heigh=
+t:0 !important; padding:0 !important; font-size:0 !important; line-height:0=
+ !important; }
+
+=09=09/* Styling for screen size 639 and less */
+=09=09@media only screen and (max-width:639px) {
+=09=09=09.py-md-10 { padding-top: 10px !important; padding-bottom: 10px !im=
+portant; }
+=09=09=09.px-md-0 { padding-left: 0 !important; padding-right: 0 !important=
+; }
+=09=09=09.px-md-30 { padding-left: 30px !important; padding-right: 30px !im=
+portant; }
+=09=09=09.pl-md-30 { padding-left: 30px !important; }
+=09=09=09.pr-md-30 { padding-right: 30px !important; }
+=09=09}
+
+=09=09/* Styling for screen size 599 and less */
+=09=09@media only screen and (max-width:599px) {
+=09=09=09.flexible { width:100% !important; }
+=09=09=09.table-center { float:none !important; margin:0 auto !important; }
+=09=09=09.table-left { float:none !important; margin:0 auto 0 0 !important;=
+ }
+=09=09=09.hide { display:none !important; width:0 !important; height:0 !imp=
+ortant; padding:0 !important; font-size:0 !important; line-height:0 !import=
+ant; }
+=09=09=09.db { display:block !important; }
+=09=09=09.image-m { display:table-cell !important; }
+=09=09=09.image-m img { display:block !important; width:100% !important; he=
+ight:auto !important; font: 10px/13px Arial,Helvetica,Verdana,Helvetica,san=
+s-serif; }
+=09=09=09.img-flex img { width:100% !important; height:auto !important; }
+=09=09=09.img-flex { width:100% !important; height:auto !important; }
+=09=09=09.aligncenter { text-align:center !important; }
+=09=09=09.alignleft { text-align:left !important; }
+=09=09=09.table-holder { display:table !important; width:100% !important; }
+=09=09=09.tcap { display:table-caption !important; width:100% !important; }
+=09=09=09.thead { display:table-header-group !important; width:100% !import=
+ant; }
+=09=09=09.trow { display:table-row !important; width:100% !important; }
+=09=09=09.tfoot { display:table-footer-group !important; width:100% !import=
+ant; }
+=09=09=09.flex { display:block !important; width:100% !important; padding-l=
+eft: 0 !important; padding-right: 0 !important; border-left: none !importan=
+t; border-right: none !important; }
+=09=09=09/* Custom */
+=09=09=09.pl-0 { padding-left: 0 !important; }
+=09=09=09.pr-0 { padding-right: 0 !important; }
+=09=09=09.px-30 { padding-left: 30px !important; padding-right: 30px !impor=
+tant; }
+=09=09=09.pt-30 { padding-top: 30px !important; }
+=09=09=09.pb-20 { padding-bottom: 20px !important; }
+=09=09=09.h-10 { height: 10px !important; }
+=09=09=09.h-25 { height: 25px !important; }
+=09=09=09.h-30 { height: 30px !important; }
+=09=09=09.pt-15 { padding-top: 15px !important; }
+         =20
+         =09 .px-15 { padding-left: 15px !important; padding-right: 15px !i=
+mportant; }
+=09=09=09.pt-2 {padding-top: 2px !important;}
+            .pt-4 {padding-top: 4px !important;}
+=09=09=09.pb-5 {padding-bottom: 5px !important;}
+=09=09=09.pb-7 {padding-bottom: 7px !important;}
+=09=09=09.pb-12 {padding-bottom: 12px !important;}
+=09=09=09.pb-13 {padding-bottom: 13px !important;}
+=09=09=09.pb-15 {padding-bottom: 15px !important;}
+=09=09=09.fz-11 {font-size: 11px !important;}
+=09=09=09.fz-12 {font-size: 12px !important;}
+=09=09=09.fz-14 {font-size: 14px !important;}
+=09=09=09.px-9 {padding-left: 9px !important; padding-right: 9px !important=
+;}
+=09=09=09.lh-116 {line-height: 116% !important;}
+=09=09=09.w-148 {width: 148px !important;}
+=09=09=09.w-auto {width: auto !important;}
+=09=09}
+
+=09=09/* Styling for screen size 499 and less */
+=09=09@media only screen and (max-width:374px) {
+=09=09=09.aligncenter-xs { text-align:center !important; }
+=09=09=09.flex-xs { display:block !important; width:100% !important; paddin=
+g-left: 0 !important; padding-right: 0 !important; border-left: none !impor=
+tant; border-right: none !important; }
+=09=09}
+=09</style>=20
+<!--[if gte mso 9]><xml>
+=09=09<o:OfficeDocumentSettings>
+=09=09=09<o:AllowPNG/>
+=09=09=09<o:PixelsPerInch>96</o:PixelsPerInch>
+=09=09</o:OfficeDocumentSettings>
+=09</xml><![endif]-->=20
+<!--[if (gte mso 9)|(IE)]>
+=09=09<style type=3D"text/css">
+=09=09=09table {
+=09=09=09=09border-collapse: collapse;
+=09=09=09=09border-spacing: 0;=20
+=09=09=09=09mso-line-height-rule: exactly;=20
+=09=09=09=09mso-margin-bottom-alt: 0;=20
+=09=09=09=09mso-margin-top-alt: 0;=20
+=09=09=09=09mso-table-lspace: 0pt;
+=09=09=09=09mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt !important;
+=09=09=09=09mso-table-rspace: 0pt !important;
+=09=09=09}
+=09=09=09p,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09ol,
+=09=09=09li,
+=09=09=09ul,
+=09=09=09td,
+=09=09=09th {
+=09=09=09=09font-family: Helvetica, Arial, sans-serif !important;
+=09=09=09}
+
+=09=09=09p {
+=09=09=09=09margin-bottom: 10px !important;
+=09=09=09}
+
+=09=09=09p:last-child {
+=09=09=09=09margin-bottom: 0 !important;
+=09=09=09}
+
+=09=09=09.ico-audio { padding-top: 0 !important; }
+=09=09</style>
+=09<![endif]-->=20
+</head>=20
+<body style=3D"margin:0; padding:0; -webkit-text-size-adjust:100%; -ms-text=
+-size-adjust:100%;" bgcolor=3D"#f0f0f0"><style type=3D"text/css">div#emailP=
+reHeader{ display: none !important; }</style><div id=3D"emailPreHeader" sty=
+le=3D"mso-hide:all; visibility:hidden; opacity:0; color:transparent; mso-li=
+ne-height-rule:exactly; line-height:0; font-size:0px; overflow:hidden; bord=
+er-width:0; display:none !important;">Plus, the next generation of game eng=
+ines, what the new year holds for crypto, and more</div>=20
+<table style=3D"min-width:320px;" width=3D"100%" cellspacing=3D"0" cellpadd=
+ing=3D"0" bgcolor=3D"#f0f0f0">=20
+<tbody>
+<tr>=20
+<td style=3D"line-height:0;">
+<div style=3D"display:none; white-space:nowrap; font:15px/1px courier;">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp;
+</div></td>=20
+</tr>=20
+<tr>=20
+<td>=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>
+<tr>=20
+<td>=20
+<center>=20
+<div style=3D"max-width: 640px; margin: auto;">=20
+<!--[if mso]>
+=09=09=09=09=09=09=09=09=09<table role=3D"presentation" style=3D"width: 640=
+px;" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center">
+=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09=09=09<![endif]-->=20
+<table class=3D"flexible" style=3D"max-width: 640px; width: 100%; margin: 0=
+ auto;" cellpadding=3D"0" cellspacing=3D"0" align=3D"center">=20
+<tbody>
+<tr>=20
+<td>=20
+<!-- ||| Header ||| -->=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>
+<tr>=20
+<td class=3D"py-md-10" style=3D"padding: 20px 10px 7px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>
+<tr>=20
+<td style=3D"font: 14px/120% Proxima Nova, Arial, Helvetica, sans-serif; co=
+lor: #97999b;" valign=3D"top">=20
+<div class=3D"mktoText" id=3D"preHeaderLeftContent"></div> </td>=20
+<td style=3D"width: 15px;" width=3D"15"></td>=20
+<td style=3D"font: 14px/120% Proxima Nova, Arial, Helvetica, sans-serif; co=
+lor: #97999b;" align=3D"right" valign=3D"top">=20
+<div class=3D"mktoText" id=3D"preHeaderRightContent">
+<a style=3D"text-decoration: none; color: #97999b;" href=3D"https://go2.a16=
+z.com/v/MzgyLUpaQi03OTgAAAGQ1kCKD_eVefLbAbhFo_7U06UNR8eSYKsfdhLvopE5Ic98uEe=
+hmEc7nHG8ZdGKScVtcfgks3A=3D" target=3D"_blank">View Online</a>
+</div> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!-- ||| Header end ||| --> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"mktoContainer" id=3D"mkto-container" style=3D"background-image=
+: url('https://info.a16z.com/rs/382-JZB-798/images/bg-wave01--newsletter-09=
+-29-020.png'); background-repeat: no-repeat; background-position: top left;=
+" bgcolor=3D"#ffffff">
+<table class=3D"mktoModule" id=3D"sep491fd52225-4459-4d33-acb8-89cca7888ed3=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 39px;" height=3D"39"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"pageHeader9dd699b4-c0fc-4b9a-bedd-812eb9a=
+bd77e" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-left: 30px; padding-right: 30px;" valign=3D"middle">=
+=20
+<table class=3D"flexible" style=3D"margin-right: auto;" width=3D"65%" cells=
+pacing=3D"0" cellpadding=3D"0" align=3D"left">=20
+<tbody>=20
+<tr>=20
+<td class=3D"aligncenter" style=3D"padding: 0; text-align: left;" valign=3D=
+"middle" align=3D"left">=20
+<div class=3D"mktoImg" id=3D"headerLogo3ec5b82e-1bb3-4360-b6b9-867679c34f3f=
+" mktolockimgsize=3D"false">=20
+<a style=3D"text-decoration: none;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKEOAP-o5R6G1WqDo4y0lS8otpdCJNu=
+YMCeCiWRXLoWi4YF9faOhNxciimZPo1y7NDZn8=3D" target=3D"_blank"
+><img style=3D"vertical-align: top; max-width: 100%; height: auto;" src=3D"=
+https://info.a16z.com/rs/382-JZB-798/images/logo-new-black--01-26-021.png" =
+width=3D"190" alt=3D"ANDREESSEN HOROWITZ" border=3D"0" /></a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<table class=3D"&nbsp; flexible" style=3D"margin-left: auto;" width=3D"30%"=
+ cellspacing=3D"0" cellpadding=3D"0" align=3D"right">=20
+<tbody>=20
+<tr class=3D"&nbsp;">=20
+<td class=3D"aligncenter pt-15 &nbsp;" style=3D"padding: 5px 0 0; text-alig=
+n: right; font: 14px/136% Proxima Nova, Arial, Helvetica, sans-serif; color=
+: #97999b;" valign=3D"middle">=20
+<div class=3D"mktoText &nbsp;" id=3D"headerRightContent5d85b7a4-dd34-4adf-8=
+84f-51e827c91d70">=20
+<p>Not a subscriber yet? <br class=3D"hide" />Sign up <u><a style=3D"color:=
+ #97999b;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD2wpct0Y6iMsB6pMTvqUXUSVlu3_x=
+ACpkB2ukkKhR1sci5PbB90QDiyyKct4rF_TOxI=3D" target=3D"_blank"
+>here</a></u>.</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep507aa0bd41-051f-4365-a97f-9ebf50ecb4d3=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 29px;" height=3D"29"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep51e1a26d63-a819-4c70-9a75-377b79176d73=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 20px;" height=3D"20"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep479c3fb773-fb17-4688-8841-52b7c1ee8a6e=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 10px;" height=3D"10"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep4757ef6f84-a8e9-4e67-8f50-f9333404aad3=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep100df1f7c84-b704-483f-ac06-3c1cc8a6ea2=
+3" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock286466df-49d2-4d85-af3c-f043e51746=
+6e" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader8864aea3-293d-4bb4-b61e-0f812ab5bf3c"=
+>
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD7qFJPLDtJOI_LmHyjMicDEPRGJtb=
+jk3GST6PktFo30_-sAIw0v4PpJGy1VBZPg7R4s=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Politics and the Future</a></span></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthore10ec6a3-5df7-4a88-9002-54ac5e3e269b"=
+>
+<p>by Ben Horowitz</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContentecdae7dd-0761-4f2c-84eb-fec7b6fb9e31=
+">
+<p>As software has eaten the world, it has become integral to every industr=
+y and nearly every endeavor in our society. As a result, the governments ar=
+ound the world have become increasingly interested in the implications and =
+how they might regulate the technology.</p>=20
+<p>We believe that advancing technology is critical for humanity=E2=80=99s =
+future, so we will, for the first time, get involved with politics by suppo=
+rting candidates who align with our vision and values specifically for tech=
+nology.</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLinkaeb9cb53-98c1-4925-be82-9d5f30dd46c8">
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD7qFJPLDtJOI_LmHyjMicDEPRGJtb=
+jk3GST6PktFo30_-sAIw0v4PpJGy1VBZPg7R4s=3D" target=3D"_blank"
+>Read now =C2=BB</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep4793d34968-9407-477a-a019-95bee121b8d5=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock0b44399a-5ccc-4397-8233-56f16085fa=
+b3" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader4b72ec77-d9dc-4622-8d48-eea1c43558eb"=
+>
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD2SzZ802IrtEzyCow_y5KKznx6-hX=
+dBqjSi1Cp0NddlG7ca8nzKYb3oIJeitfRyADsE=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Unbundling the Game Engine: The Rise of Next Generation 3D Creation Engine=
+s</a></span></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthor7254832e-ff81-4d3c-a39b-1d72a822c9db"=
+>
+<p>by Troy Kirwin and Jonathan Lai</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContentd46488ac-21ef-4431-a323-76400d817ce9=
+">
+<p>There is a unique window of opportunity today for a new 3D Creation Engi=
+ne (aka game engine) to revolutionize the way we create games, film, virtua=
+l worlds, and simulations.</p>=20
+<p>Unity, Unreal, Roblox and Godot =E2=80=94 the predominant 3D engines =E2=
+=80=94 are all 15+ year old technologies architected for a different era of=
+ computing. The emergence of generative AI, cloud computing, and new spatia=
+l platforms is poised to disrupt 3D creation end-to-end.</p>=20
+<p>This article lays out the history of game engines, and discusses what a =
+next generation 3D game engine looks like and what this means for the indus=
+try going forward.</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLink9eeea0c8-6f15-4390-9fcb-540aeffcc982">
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD2SzZ802IrtEzyCow_y5KKznx6-hX=
+dBqjSi1Cp0NddlG7ca8nzKYb3oIJeitfRyADsE=3D" target=3D"_blank"
+>Read now =C2=BB</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep47d260b565-62dc-4247-8b95-07b8b95c1d7f=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock4ab4453a-3e21-4cfb-ad5e-e5a9b7a831=
+60" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader4514438d-048c-4adf-ae48-1693b5b660b7"=
+>
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD05iPCixgD8OA3ReMGpbTqsdwRRTH=
+oFrXcopsf010ifMZw_sySO_njzZGQ2c3wx8KGs=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>A Few of the Things We=E2=80=99re Excited About in Crypto for 2024</a></sp=
+an></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthor90677e45-c8d8-44fd-a5c3-20f7b3e28f78"=
+>
+<p>by Andrew Hall, Miles Jennings, Scott Duke Kominers, Eddy Lazzarin, Dare=
+n Matsuoka, Sam Ragsdale, karma (Daniel Reynaud), Arianna Simpson, Carra Wu=
+, and Ali Yahya</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContentd541363e-0182-43dc-8990-6e125633ba7f=
+">
+<p>From the increasing importance of decentralization and the rise of modul=
+ar tech in the open source tech stack, to passkeys that reset the UX of the=
+ future, these are just a few things that a16z crypto team members are exci=
+ted about this year.</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLink44fd7296-9c9d-42b1-8c92-cdc145bb137f">
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD05iPCixgD8OA3ReMGpbTqsdwRRTH=
+oFrXcopsf010ifMZw_sySO_njzZGQ2c3wx8KGs=3D" target=3D"_blank"
+>Read now =C2=BB</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep4793edd00f-5aaf-447c-87a0-0e1dd9420ddf=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock6ed0fb11-99a8-4e06-a6ac-c2fb64e987=
+ea" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader1266f898-7a28-48d5-8f87-5979f767393c"=
+>
+<p><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD0X6niGM_XHvfaAj4Y64_5slIpoUu=
+xfr3VvoKkejMcr4bo4ysZdbQNiJu_o7YW9dhfQ=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Marketplaces in the Age of AI</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthorb5adead3-c52d-43f5-91f6-fc8fc68ebdfb"=
+>
+<p>by Olivia Moore</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContent705f6946-e4df-42bd-9cd8-b5eebc4d0204=
+">
+<p>While the marketplace business model is evergreen, every new platform ch=
+anges how and where transactions happen. The internet took us from classifi=
+eds and poster boards to sites like Amazon, eBay, and Craigslist, while mob=
+ile enabled apps like DoorDash, Uber, and Instacart.</p>=20
+<p>Now, we believe generative AI promises to revolutionize marketplaces aga=
+in. It will not only transform how products and services are sold =E2=80=94=
+ but also how they are made.</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLink52b187a7-eee0-4643-b6d5-6b7e78970d63">
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD0X6niGM_XHvfaAj4Y64_5slIpoUu=
+xfr3VvoKkejMcr4bo4ysZdbQNiJu_o7YW9dhfQ=3D" target=3D"_blank"
+>Read now =C2=BB</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep47ecaf9f72-ffe3-4137-b8ff-c56248419e22=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblocka801925a-e2f9-4d1f-9d70-a1b2ab9f8b=
+6f" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheadera2178be8-4621-4648-9cc7-1a48adaefdeb"=
+>
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD3DgWJQ0xfqhtg6pGjziGRx6AIjI6=
+8IFNZ0SVggrhqdIqYCuq1DrJWxIV_Y9e_Qu4Ak=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Underestimating AI in Healthcare</a></span></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthorfd5c8391-2401-4956-be29-3753cb5294d2"=
+>
+<p>by Daisy Wolf, Adela Tomsejova, Jay Rughani, and Vijay Pande</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContent59ce0e76-9b45-4925-b4fb-d18b2f11038a=
+">
+<p>Over the past half century, Wall Street was completely revolutionized by=
+ computers. Now, AI is about to bring a similar revolution to healthcare.</=
+p>=20
+<p>Over the next few decades, at least half of the $4.3 trillion dollar Ame=
+rican healthcare industry will be AI-driven =E2=80=94 and the markets are s=
+ignificantly undervaluing this opportunity.</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLinkaac0b8a2-26eb-4faa-8496-abb13a21ed45">
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD3DgWJQ0xfqhtg6pGjziGRx6AIjI6=
+8IFNZ0SVggrhqdIqYCuq1DrJWxIV_Y9e_Qu4Ak=3D" target=3D"_blank"
+>Read more =C2=BB</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep47a25940ce-c6dc-4507-913f-1fe3e1653696=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock887be2be-0237-4199-938a-5301af11b9=
+dc" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheaderc57165a5-30db-40de-b253-75ef05cadb4b"=
+>
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD4AMOLNQCLzlx6b5ZcuEBW00iB3Bw=
+XQ98s0VyOrgXDWYIq-BjCpM7bQ_chdNG00ykiA=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>From Bacteria to Bedside: The Arrival of CRISPR Medicine</a></span></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthorcf8ba471-3f9f-47b9-b3f5-447f0c3bfaee"=
+>
+<p>by Jorge Conde and Kris Tatiossian</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContentd11aaf67-38c4-4ea9-b157-90829c5c5da1=
+">=20
+<p>Originally discovered in bacteria, <span style=3D"color: #5bc2e7;"><a hr=
+ef=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDwC_i7oYKXHWFQIQ8AxJ12snIgkdX=
+HlgTt6fW_-Bm4m2IEaDL_8_KbM6uL08z6ionFs=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #5bc2e7;"
+>CRISPR</a></span> quickly became the workhorse gene-editing system underly=
+ing the next generation of <span style=3D"color: #5bc2e7;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDoA3ATYRg-Wc7cANguEYX5eIoXMkX=
+iaM6nUM1Egpo5mxO3D-gJtV3IJpDiAvR0Cyk2g=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #5bc2e7;"
+>programmable medicines</a></span>. Last month=E2=80=99s <span style=3D"col=
+or: #5bc2e7;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD627MiaM-nIBWn7hFaol3Kvlazu5a=
+S4bhBtvE7GT-Ln_5Kxzc9SwSR7iS_VSLgqRT4c=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #5bc2e7;"
+>landmark approval</a></span> by the US Food and Drug Administration of Ver=
+tex Pharmaceuticals=E2=80=99 and CRISPR Therapeutics=E2=80=99 Casgevy, the =
+world=E2=80=99s first CRISPR-based treatment, marks a groundbreaking shift =
+in how we tackle intractable diseases.</p>=20
+<p>And it=E2=80=99s a milestone barely a decade in the making: the <span st=
+yle=3D"color: #5bc2e7;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD4Rno_Br3QXjqmWdTJR-7zAmKUR_w=
+IovwJxdxgb7Y6zWonujPiVSqN4lC4JQNG3iyLY=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #5bc2e7;"
+>original publications describing</a></span> CRISPR=E2=80=99s potential dat=
+e back to 2012. Since then, CRISPR has transitioned from being a bacterial =
+protein to a gene-editing tool, <span style=3D"color: #5bc2e7;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDxa1dYKpZgHwKE0T07iX5D0Fcn69v=
+kqoKSW3ECJYUaBhXmzT6zEgRq-gaPvxxlZTzZ8=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #5bc2e7;"
+>earned</a></span> a Nobel Prize, and is now an FDA-approved medicine.</p>=
+=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLinkc50235fb-c67b-48bd-b1ea-fe7b1204bf3f">
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD4AMOLNQCLzlx6b5ZcuEBW00iB3Bw=
+XQ98s0VyOrgXDWYIq-BjCpM7bQ_chdNG00ykiA=3D" target=3D"_blank"
+>Read&nbsp;now =C2=BB</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep4791a2aca9-14e0-4f39-8ad8-1f2803f1f701=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock3b2085df-87c9-4e48-9cf5-b3fb99cfc4=
+a3" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheaderca81ed36-b6d1-4586-b294-0701925f5795"=
+>
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD8pybDgAQLxZdcUcZCFqmbXFvE9g-=
+-lcoiotuGo2rBNoRuyjpjKb6fBubZP3ukvUWUE=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>The New Drug Delivery Challenge: How Will Cures Reach Patients?</a></span>=
+</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthor92ff949a-6bc7-4a95-9efb-5297e146393e"=
+>
+<p>by Jay Rughani, Annie Collins, Jorge Conde, and Julie Yoo</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContent9ca656d0-4786-400a-b610-8c5bda475bf3=
+">
+<p>Our current healthcare delivery and insurance system =E2=80=94 both priv=
+ate and public =E2=80=94 is not designed to be able to pay for or distribut=
+e medications at scale.</p>=20
+<p>This leaves patients exposed to high prices and confusing logistics, pro=
+viders without infrastructure to support those patients through their care =
+journeys, payors facing unsustainable economics, and manufacturers with unc=
+ertainty around the distribution of their impactful products.</p>=20
+<p>And yet, these drugs are being developed more rapidly than ever. It=E2=
+=80=99s time to figure out how to access, pay for, and deliver curative the=
+rapies (amongst other high-cost, complex, specialty drugs), at scale.</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLink6635f119-349f-45e2-ae1b-53097891d2e5">
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD8pybDgAQLxZdcUcZCFqmbXFvE9g-=
+-lcoiotuGo2rBNoRuyjpjKb6fBubZP3ukvUWUE=3D" target=3D"_blank"
+>Read&nbsp;now =C2=BB</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep4729fd7fc4-4a49-47b5-86eb-a7b3ce3558e7=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblockbb68393f-dec5-4d0a-b220-d37bc1bd7b=
+2f" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader1ded50cc-5aa8-464b-abef-f5b2c3e2e2f2"=
+>
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD-VRyKosm3dar4P5pl5g0HDYd_ZaV=
+Flnpb-MiQnpy-hvIrV8vtzF1deI1-dWtZNxR9Q=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>How to Think of R&amp;D Spend</a></span></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthor87ee1de1-78b0-4189-a231-67cd017fa615"=
+>
+<p>by David George</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContent81193287-27d6-4f1a-bcbe-2c005eda6e50=
+">
+<p>Capital allocation is a core part of any CEO=E2=80=99s job, and it=E2=80=
+=99s particularly critical for growth-stage CEOs. After all, once your comp=
+any goes public, you=E2=80=99ll be expected to justify every dollar you spe=
+nd.</p>=20
+<p>Many growth-stage CEOs know how to efficiently allocate capital in every=
+ part of their budget with one glaring exception: research and development =
+(R&amp;D).</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLink712ce42f-cb11-40fa-95e5-800b6204e464">
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD-VRyKosm3dar4P5pl5g0HDYd_ZaV=
+Flnpb-MiQnpy-hvIrV8vtzF1deI1-dWtZNxR9Q=3D" target=3D"_blank"
+>Read&nbsp;now =C2=BB</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep47110725f7-8213-4920-83bd-21f009d13daf=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 22px;" height=3D"22"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblockc315eccc-5951-4b9c-a491-68098a707b=
+2d" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader84da7f0e-da4e-45cc-99f4-c0d1b52dd548"=
+>=20
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDxcXWFTRULuhGRbHfoh7e9cE3DTlb=
+t-wEj7ovl9eptGkD6OKaM55xyDY6-o3YGYdZ1I=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Books, Shows, Apps: Some Recommendations</a></span></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthor06992189-dab6-4273-9ac2-61a5fca4bc8d"=
+>=20
+<p>by a16z crypto team</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContent5872aa44-3df7-4287-bd41-9ade055f3a1d=
+">=20
+<p>In the spirit of sharing what we=E2=80=99re reading =E2=80=94 a regular =
+tradition around here; see our <span style=3D"color: #5bc2e7;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD63cc-Tc42CKF5-Fzp5G3hMiVJ4YV=
+H-eUxEOMjfeAQPT0EEtwVZq9f5dzM3lV7NqJAQ=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #5bc2e7;"
+>winter 2023 list of books, games, movies, and more</a></span> as well as m=
+any other past installments with evergreen recs =E2=80=94 here are some of =
+the books recently curated for the second annual a16z crypto <span style=3D=
+"color: #5bc2e7;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD-cHQr4XIMnNmIAiVWZF5JLjq4mIr=
+SVa9adGhAAQrp0m2B46BV3qBWpMXhaDF-gqFs8=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #5bc2e7;"
+>Founder Summit</a></span>.</p>=20
+<p>These recommendations are not just for crypto founders =E2=80=94 the lis=
+t spans biographies to company building and organizational history and the =
+process of innovation to creative inspiration and science fiction. There=E2=
+=80=99s something for everyone!</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLinkfd6c97d4-3c66-469b-a79e-a51f7b5fe89d">=
+=20
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDxcXWFTRULuhGRbHfoh7e9cE3DTlb=
+t-wEj7ovl9eptGkD6OKaM55xyDY6-o3YGYdZ1I=3D" target=3D"_blank"
+>Read&nbsp;now =C2=BB</a></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep47bc2ab174-a09d-42c2-810a-d1658f5f5653=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock984d0ce1-a010-4511-a71e-251ca672d1=
+b4" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheaderf1a3da65-8343-4e68-97ab-40b677006233"=
+>=20
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDzP3bxKkwIG_yy1XBHkc6bOadQ85p=
+hYUrOzene1ggVq_jkLSZ-Flf25V1fiQriBf36w=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Overages: The Overlooked Problem in Usage-based Pricing (and How to Fix It=
+) </a></span></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthor2461f3f0-9c98-4415-bd36-49755b64d30d"=
+>=20
+<p>by Joe Morrissey</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContentd6a5978f-0398-44d3-a71a-9c52d9087cad=
+">=20
+<p>GTM leaders often hit their customers with overages as a way to get thos=
+e customers to commit to higher spends up front =E2=80=94 which gives the v=
+endor more predictable revenue streams and a reliable way to upsell existin=
+g accounts.</p>=20
+<p>While some usage-based businesses might need to use overages as a stick =
+to get more cash upfront, many others can actually generate more revenue by=
+ removing that friction and tiering pricing for how their customers want to=
+ consume.</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLinka0e4cc4c-3291-4625-873c-09b5cdf13e59">=
+=20
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDzP3bxKkwIG_yy1XBHkc6bOadQ85p=
+hYUrOzene1ggVq_jkLSZ-Flf25V1fiQriBf36w=3D" target=3D"_blank"
+>Read&nbsp;now =C2=BB</a></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep47fcd84a75-bab1-416e-b9d8-e25ac66dd651=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"heading028f5ff75c-2e9c-4cdb-a205-83ec36c2=
+4d27" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff=
+">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;">=20
+<div class=3D"mktoText" id=3D"heading02Contentdf7b922c-6738-4837-834f-bb679=
+9857006">=20
+<p><span style=3D"color: #4b4f54;">Podcasts:</span></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock0cf95923-7a84-459d-b935-73c193ba99=
+71" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader6d70b626-4666-4b8e-9a49-976ce975fc8d"=
+>
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDnNf5ERqVf3iXKMidufMFfh6sTvY2=
+WPb8OL3sEKCjesWVObmvBTZ19bCA4Hq7pU6UHs=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>The Future of Longevity with Tony Robbins</a></span></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthord08b1be4-9043-4b90-a68a-36302abdd56d"=
+>
+<p>with Marc Andreessen, Ben Horowitz, and Tony Robbins</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContent1daa2335-e6db-4fe3-a971-1bb6b3b1cff2=
+">
+<p>In this episode of The Marc and Ben Show, special guest Tony Robbins joi=
+ns Marc and Ben, as well as a16z Bio + Health General Partner Vijay Pande, =
+to discuss the future of longevity.</p>=20
+<p>They discuss new breakthroughs in regenerative medicine, AI, biohacking,=
+ gene editing, and mindset =E2=80=94 and confirm why this might be the best=
+ time to be alive.</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLink4e8882e0-d55f-4cf3-a0e3-1d8c76a36e3d">
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDnNf5ERqVf3iXKMidufMFfh6sTvY2=
+WPb8OL3sEKCjesWVObmvBTZ19bCA4Hq7pU6UHs=3D" target=3D"_blank"
+>Listen now =C2=BB</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep4729110144-bb2a-43e6-9d92-ad0b9e4730e5=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 22px;" height=3D"22"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock2792688e-e59a-4536-9219-31e32f5e67=
+1b" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader5c334736-0edf-4cb3-bc90-f13b87019b4e"=
+>
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD4_hGmbIeYbzyf3XR7WCD4OvjvBuJ=
+ZZYWV3GxsxxWFw0lal2jl6gJKrcBDso5IkB_ZQ=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>IRA, AI Regulation, and the Future</a></span></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthor3a5b74cb-17d8-46b4-9158-1f89960e6263"=
+>
+<p>with Vijay Pande, Kris Tatiossian, and Olivia Webb</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContentf95368a1-f61a-490b-ba87-78dade0752de=
+">
+<p>In this episode, Joe Grogan, a senior fellow at the Leonard D. Schaeffer=
+ Center for Health Policy and Economics and a former senior government offi=
+cial, joins Vijay Pande to discuss all things regulation.</p>=20
+<p>Together, they dive into Joe=E2=80=99s experience working in the early d=
+ays of the Covid pandemic, how he thinks about the Inflation Reduction Act=
+=E2=80=99s effect on pharmaceutical R&amp;D, and the future of AI regulatio=
+n.</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLinkaebef813-8e27-4789-a544-dd37a32017eb">
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD4_hGmbIeYbzyf3XR7WCD4OvjvBuJ=
+ZZYWV3GxsxxWFw0lal2jl6gJKrcBDso5IkB_ZQ=3D" target=3D"_blank"
+>Listen now =C2=BB</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep47c024f81e-594c-4237-8855-229b78232118=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblockeabca1b3-13fe-4409-8898-97b93cd400=
+21" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader6f723102-1259-4f75-a6a9-a5aff57a5de9"=
+>
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD0tCum9TonmQqxM9_35SwNb5vsX2k=
+B3UOUJztJjWHy-sGtW-7CjSGggdmbEEcV3XOlQ=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>My First 16: Launching a New Category with Modern Treasury=E2=80=99s Dimit=
+ri Dadiomov</a></span></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthor7784bea9-e087-4439-ae9e-192f177325f4"=
+>
+<p>with Seema Amble and Dimitri Dadiomov</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContent7f48244c-7885-42b4-9590-8518b7e59bbe=
+">
+<p>Our new video podcast series <span style=3D"color: #5bc2e7;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDxiCnCx6BcmOQuXiupCn6Mv6a176I=
+7DpZxvB6YGSbNx2S2NKKF2PcUQAYOmalhMqsq4=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #5bc2e7;"
+>My First 16</a></span> features interviews with founders and CEOs of finte=
+ch companies about how they acquired their initial customers and the hard l=
+essons they learned along the way.</p>=20
+<p>In this episode, a16z partner Seema Amble talks with Dimitri Dadiomov, t=
+he co-founder and CEO of payment operations platform Modern Treasury, about=
+ the challenges of creating a new category, hiring for marketing before you=
+ hire for sales, and why developing new features is similar to birding.</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLink2baa26c7-7ac3-4e79-b905-057c078ce1a7">
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD0tCum9TonmQqxM9_35SwNb5vsX2k=
+B3UOUJztJjWHy-sGtW-7CjSGggdmbEEcV3XOlQ=3D" target=3D"_blank"
+>Listen now =C2=BB</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep477d22923f-1716-4ff4-9c1d-5d115d198ce8=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 22px;" height=3D"22"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"heading0283a73d6e-6a2e-48b4-9899-ebea74a8=
+273f" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff=
+">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;">=20
+<div class=3D"mktoText" id=3D"heading02Contentafd3d46c-08fd-40a2-817b-ba9f1=
+1e83387">=20
+<p><span style=3D"color: #4b4f54;">Investments and announcements:</span></p=
+>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblockf58a36e1-b45f-41c1-a4b8-2781a4a785=
+7d" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheaderbad7a840-fbad-442f-90ba-53b886c10018"=
+>
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD0228aU4p5lpwXLgzjVi3ytfJ-ykS=
+Ynm670pV6Eg-_dMmfnDNslg_ADp1gJA_TRFzD0=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Announcing Our Latest Open Source AI Grants</a></span></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthorc3f6c8e5-0cd7-43df-9bf7-8949146a18a9"=
+>
+<p>by Matt Bornstein and Rajko Radovanovic</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContent4895b390-0e18-47a5-a339-1a6509bdbc4e=
+">
+<p>We=E2=80=99re excited to announce the second batch of a16z Open Source A=
+I Grant recipients. This program is designed to support a thriving open sou=
+rce ecosystem around modern AI.</p>=20
+<p>This cohort focuses mainly on two areas: tools for training, hosting, an=
+d evaluating language models; and models and communities built around visua=
+l AI. This complements many of the language model fine-tuning projects incl=
+uded in the first batch =E2=80=94 more information about the program and a =
+list of prior recipients is available <span style=3D"color: #5bc2e7;"><a hr=
+ef=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD0228aU4p5lpwXLgzjVi3ytfJ-ykS=
+Ynm670pV6Eg-_dMmfnDNslg_ADp1gJA_TRFzD0=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #5bc2e7;"
+>here</a></span>.</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLinka35446de-4d07-483c-b2bf-4f0343d27edb">
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD0228aU4p5lpwXLgzjVi3ytfJ-ykS=
+Ynm670pV6Eg-_dMmfnDNslg_ADp1gJA_TRFzD0=3D" target=3D"_blank"
+>Read now =C2=BB</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep47c8057036-d005-42f6-b7ce-315d1c3a47b2=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock9ece4831-83c7-4665-b080-615b199503=
+32" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader1a26f4ae-7bd2-4167-923e-fb8f8453737b"=
+>
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD6YQK0VC6wvilzt9HfZXxM3ILCX40=
+2M1xL6FwLtm597l2o-ONYT1mBp4WnH6Dj72NrI=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Investing in Mistral</a></span></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthor0fec266f-970f-4064-984d-e2155dc4a09d"=
+>
+<p>by Anjney Midha, Matt Bornstein, and Rajko Radovanovic</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContent6a4f5fa0-ded0-4dd9-a814-2a0bc9fc0202=
+">
+<p>Mistral AI builds fast, open-source, and secure language models.</p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLinkd5346d60-d53d-474a-8ab3-f5a469707921">
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD6YQK0VC6wvilzt9HfZXxM3ILCX40=
+2M1xL6FwLtm597l2o-ONYT1mBp4WnH6Dj72NrI=3D" target=3D"_blank"
+>Read&nbsp;more =C2=BB</a></p>
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep4756b0b7d3-03ba-48cc-b10f-fe241750aa92=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 22px;" height=3D"22"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock175530e7-debd-4440-a17a-a025cd6072=
+d9" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader2b52ebb1-4977-43f4-825b-24ba4e66e86c"=
+>=20
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD2hM804bkfiBXtAxj82Mc3kdE3qaf=
+v2yoxJgvTlDh9vrc2BUmd-cflHY7Ohod7ge7vM=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Investing in Quora and Poe</a></span></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthorcb179221-44f6-44e1-a275-af6f3959ec40"=
+>=20
+<p>by David George</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContent2099f540-605c-42de-aece-12a7dc2b7ec9=
+">=20
+<p>Poe aims to be the best way for consumers to interact with a variety of =
+AI products in the same workflow and be the easiest way for developers to b=
+uild a multi-modal AI products to reach a mass audience, whether prompting =
+an existing model to create a bot or training a model themselves.</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLink02ac378a-d72b-4dd1-805f-ca680fbdf341">=
+=20
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD2hM804bkfiBXtAxj82Mc3kdE3qaf=
+v2yoxJgvTlDh9vrc2BUmd-cflHY7Ohod7ge7vM=3D" target=3D"_blank"
+>Read&nbsp;more =C2=BB</a></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep47d3e85510-46cb-4b15-93eb-0bb7c27a9759=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock6283a752-80cb-41ae-acc7-0115defaa1=
+90" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader1b4606d6-8e41-4f18-a2d9-2dc2e79fc3d0"=
+>=20
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD1RoBQ5IOAOfWqVmQZWwA7xd_1b1J=
+WmVYg7doVomzOV9Tl7nHs2JIe9vpGGNuWNDt9c=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Investing in Luma AI</a></span></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthor1cc356d9-d67b-4c3f-9265-6af17a470dbd"=
+>=20
+<p>by Anjney Midha and Rajko Radovanovic</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContentf40df38f-3c4d-43e6-9eb5-b9e41c2e0575=
+">=20
+<p>Luma AI is building fast, high-quality, and deployable foundation models=
+.</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLink7e8da7fc-933b-43ee-a6be-6e43d5d66e39">=
+=20
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD1RoBQ5IOAOfWqVmQZWwA7xd_1b1J=
+WmVYg7doVomzOV9Tl7nHs2JIe9vpGGNuWNDt9c=3D" target=3D"_blank"
+>Read&nbsp;more =C2=BB</a></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep479ad653a8-ac34-44f1-bec2-92538397f6fe=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 22px;" height=3D"22"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblockef523052-22ea-4514-a372-6bbd97c7fc=
+86" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader5139dcc0-f840-41e7-b09c-e7f74286b6ae"=
+>=20
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDr3r7ZgH9t3K-XKuZAueheTJr58JV=
+VzaLboFgqTlUSoyNoOZKOhsi16bj-xKqpLU_i0=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Investing in Air Space Intelligence</a></span></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthor9b7420e0-322e-4e15-8c28-767aac1a5f6d"=
+>=20
+<p>by David Ulevitch</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContentcccbd328-bf6e-4c6e-b79a-b1171ae099f6=
+">=20
+<p>Air Space Intelligence is a modern aerospace company addressing the soft=
+ware crisis in aerospace in both the enterprise and government sectors.</p>=
+=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLinke0ac2dcb-2143-44e8-bebf-44431f06a962">=
+=20
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDr3r7ZgH9t3K-XKuZAueheTJr58JV=
+VzaLboFgqTlUSoyNoOZKOhsi16bj-xKqpLU_i0=3D" target=3D"_blank"
+>Read&nbsp;more =C2=BB</a></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep47f93da144-7eec-48b0-8267-c774d58a3c63=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 22px;" height=3D"22"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock9473e789-da5f-46df-9ea2-c68d99c8eb=
+cd" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader47e300f6-d3e1-4227-a727-a8f5c3e21d90"=
+>=20
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD3SgO5q1NZbTFMhJoDz3KmV0iQdf6=
+yFbFhTQk-teN2pqcCySnuoFQdz6bc9S9KJUbbA=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Investing in Tome Biosciences</a></span></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthore0117ff4-09f3-47f9-98f4-98747ab939cc"=
+>=20
+<p>by Jorge Conde</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContent092134f7-e9b8-4b93-82c2-8738a22efa51=
+">=20
+<p>Tome Biosciences is&nbsp;a programmable genomic integration (PGI) compan=
+y.</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLinkfeab10d2-3e1b-4fd5-801e-769d43c82b49">=
+=20
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD3SgO5q1NZbTFMhJoDz3KmV0iQdf6=
+yFbFhTQk-teN2pqcCySnuoFQdz6bc9S9KJUbbA=3D" target=3D"_blank"
+>Read&nbsp;more =C2=BB</a></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep47ac7af08f-9da8-4a2c-8e66-171ee17cb67f=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 22px;" height=3D"22"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblocka554d476-5b72-4f64-84b8-080c1be278=
+c7" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheadera470b1ac-c96f-434a-8a44-d43a0931cd5b"=
+>=20
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD2zNil6Jcj6x6o5_-fXVe6Se_qRy0=
+hH-oYZIV1EwtsSCTGb9lLSUErWDbsrdPPKteZc=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Investing in Distributional</a></span></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthordec2698f-37c1-4978-b3b2-16a0c1a5deaa"=
+>=20
+<p>by Martin Casado and Matt Bornstein</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContent938a8384-ffa4-4733-bd1c-78ddd2dc7ea9=
+">=20
+<p>Distributional is building a platform for robust and repeatable testing =
+of AI and machine learning models.</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLink575f2d2d-7811-4b50-9a95-59a3d10a2fca">=
+=20
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD2zNil6Jcj6x6o5_-fXVe6Se_qRy0=
+hH-oYZIV1EwtsSCTGb9lLSUErWDbsrdPPKteZc=3D" target=3D"_blank"
+>Read&nbsp;more =C2=BB</a></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep47c9702c1a-79cb-4390-8015-782e9db1d2b7=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 22px;" height=3D"22"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"nlblock8e2f7f5d-4dae-4a7d-9e20-7130454eab=
+9f" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlheader0c18ad92-b44c-4426-a2e8-0b493e2635db"=
+>=20
+<p><span style=3D"color: #ed8b00;"><a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD6m4u91qvGZVzDOjz2gQO4zqBvzhc=
+UfDaoomKCs8nXXPpJKNQCkYjccDruW6l9HybnY=3D" target=3D"_blank" id=3D"" style=
+=3D"color: #ed8b00;"
+>Investing (Again) in Dynamic Labs</a></span></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-top:5px;padding-left: 50px; padding=
+-right: 50px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 700 16px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #97999b;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlauthor029149ad-214f-4834-b40c-59c4fb313985"=
+>=20
+<p>by Arianna Simpson</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 400 16px/128% Proxima Nova, Arial, Helvetica, sans-serif=
+;     color: #4b4f54;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlContenta9a66e4c-4ce9-41e1-a4bb-49582752d41d=
+">=20
+<p>Dynamic Labs helps developers create wallet-based login, onboarding, and=
+ authentication flows, allowing them to focus on their core product.</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 15px;" height=3D"15"=
+>&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: bold 16px/128% Proxima Nova, Arial, Helvetica, sans-seri=
+f; color:#5bc2e7;" align=3D"left">=20
+<div class=3D"mktoText" id=3D"nlLink95dd1707-ff03-4590-b092-a4138b1668b4">=
+=20
+<p><a style=3D"text-decoration: none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD6m4u91qvGZVzDOjz2gQO4zqBvzhc=
+UfDaoomKCs8nXXPpJKNQCkYjccDruW6l9HybnY=3D" target=3D"_blank"
+>Read&nbsp;more =C2=BB</a></p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"txtBlock02e576eb93-7d7b-4cef-be65-c9cc910=
+cd135" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#fffff=
+f">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 16px/128% Proxima Nova, Arial, Helvetica, sans-serif; co=
+lor: #4b4f54;">=20
+<div class=3D"mktoText" id=3D"txtBlock02Contentc4bdd2ee-2e90-4d9e-b36b-2223=
+bbc6c457">=20
+<!-- <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"font: 700 24px/120% Proxima Nova, Arial, Helvetica, sans-serif=
+; color: #ed8b00;">
+<p><span style=3D"color: #4b4f54;">In Case You Missed It</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p></p>
+</li>
+
+</ul>  -->=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep382deb28e7-aa45-4423-96bd-9272b2845f0b=
+" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff">=
+=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 35px;" height=3D"35"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep32" width=3D"100%" cellspacing=3D"0" c=
+ellpadding=3D"0" bgcolor=3D"#f6f7f7">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 32px;" height=3D"32"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"txtBlock15" width=3D"100%" cellspacing=3D=
+"0" cellpadding=3D"0" bgcolor=3D"#f6f7f7">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 50px; padding-right: 50px;">=
+=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font: 14px/157% Proxima Nova, Arial, Helvetica, sans-serif; co=
+lor: #97999b;" valign=3D"top">=20
+<div class=3D"mktoText" id=3D"txtBlock15Content">=20
+<p>You are receiving this newsletter since you opted in earlier; if you wou=
+ld like to opt out of future newsletters, you can unsubscribe immediately.<=
+/p>=20
+<p>This newsletter is provided for informational purposes only, and should =
+not be relied upon as legal, business, investment, or tax advice. You shoul=
+d consult your own advisers as to those matters. This newsletter may link t=
+o other websites and certain information contained herein has been obtained=
+ from third-party sources. While taken from sources believed to be reliable=
+, a16z has not independently verified such information and makes no represe=
+ntations about the enduring accuracy of the information or its appropriaten=
+ess for a given situation.</p>=20
+<p>References to any companies, securities, or digital assets are for illus=
+trative purposes only and do not constitute an investment recommendation or=
+ offer to provide investment advisory services. Furthermore, this content i=
+s not directed at nor intended for use by any investors or prospective inve=
+stors, and may not under any circumstances be relied upon when making a dec=
+ision to invest in any fund managed by a16z. (An offering to invest in an a=
+16z fund will be made only by the private placement memorandum, subscriptio=
+n agreement, and other relevant documentation of any such fund which should=
+ be read in their entirety.) Past performance is not indicative of future r=
+esults.</p>=20
+<p>Charts and graphs provided within are for informational purposes solely =
+and should not be relied upon when making any investment decision. Content =
+in this newsletter speaks only as of the date indicated. Any projections, e=
+stimates, forecasts, targets, prospects and/or opinions expressed in these =
+materials are subject to change without notice and may differ or be contrar=
+y to opinions expressed by others. Please see <a style=3D"text-decoration: =
+none; color: #5bc2e7;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKEDgqq7N9e8yfafIcjz3JJTE0-_esD=
+5CjzOuPNEGZwpsgl55IIO71f9FGo2zOUposQ_8=3D" target=3D"_blank"
+>a16z.com/disclosures</a> for additional important details.</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"sep33" width=3D"100%" cellspacing=3D"0" c=
+ellpadding=3D"0" bgcolor=3D"#f6f7f7">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 34px;" height=3D"34"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"footerSep01" width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" bgcolor=3D"#4c4f53">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 32px;" height=3D"32"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"footerLogoBlock" width=3D"100%" cellspaci=
+ng=3D"0" cellpadding=3D"0" bgcolor=3D"#4c4f53">=20
+<tbody>=20
+<tr>=20
+<td class=3D"px-md-30" style=3D"padding-left: 60px; padding-right: 60px;">=
+=20
+<table class=3D"table-center w-148" width=3D"100%" cellspacing=3D"0" cellpa=
+dding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center">=20
+<div class=3D"mktoImg" id=3D"footerLogoBlockLogo" mktolockimgsize=3D"false"=
+>=20
+<a style=3D"text-decoration: none;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKEOAP-o5R6G1WqDo4y0lS8otpdCJNu=
+YMCeCiWRXLoWi4YF9faOhNxciimZPo1y7NDZn8=3D" target=3D"_blank"
+><img style=3D"vertical-align: top; max-width: 100%; height: auto;" src=3D"=
+https://info.a16z.com/rs/382-JZB-798/images/a16z-logo-white-09-29-020.png" =
+width=3D"174" alt=3D"ANDREESSEN HOROWITZ" border=3D"0" /></a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"fz-14 pb-7 pt-4" style=3D"font: 16px/143% Proxima Nova, Arial,=
+ Helvetica, sans-serif; color: #a0a3a9; padding-top: 6px; padding-bottom: 8=
+px;" valign=3D"top" align=3D"center">=20
+<div class=3D"mktoText" id=3D"footerLogoBlockSlogan">=20
+<p>Software Is Eating The World</p>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"socialNetworkingItems" width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#4c4f53">=20
+<tbody>=20
+<tr>=20
+<td>=20
+<table style=3D"margin-left: auto; margin-right: auto;" cellspacing=3D"0" c=
+ellpadding=3D"0" align=3D"center">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"middle">=20
+<div class=3D"mktoImg" id=3D"socialNetworkingItemsItem01" mktolockimgsize=
+=3D"false">=20
+<a style=3D"text-decoration: none;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDyTS6JiPdspHPMpni0tu3nBDwK3Qa=
+iMdBar2N07fuFE0APLFCWgm2A4gDVCF5Ranz2w=3D" target=3D"_blank"
+> <img style=3D"display: block; vertical-align: top; max-width: 100%; heigh=
+t: auto;" src=3D"https://info.a16z.com/rs/382-JZB-798/images/twitter-white-=
+ico@2x--newsletter-09-29-020.png" alt=3D"twitter icon" width=3D"12" border=
+=3D"0" /> </a>=20
+</div> </td>=20
+<td style=3D"width: 16px;" width=3D"16"></td>=20
+<td valign=3D"middle">=20
+<div class=3D"mktoImg" id=3D"socialNetworkingItemsItem02" mktolockimgsize=
+=3D"false">=20
+<a style=3D"text-decoration: none;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD84EXqqUix65Yx9Ov2Lg2Pkef-n6p=
+-ZRYyzV2yHTWEiWg8aSl82PJhCW6p69ynjbSzc=3D" target=3D"_blank"
+> <img style=3D"display: block; vertical-align: top; max-width: 100%; heigh=
+t: auto;" src=3D"https://info.a16z.com/rs/382-JZB-798/images/linkedin-white=
+-ico@2x--newsletter-09-29-020.png" alt=3D"linkedin icon" width=3D"12" borde=
+r=3D"0" /> </a>=20
+</div> </td>=20
+<td style=3D"width: 16px;" width=3D"16"></td>=20
+<td valign=3D"middle">=20
+<div class=3D"mktoImg" id=3D"socialNetworkingItemsItem03" mktolockimgsize=
+=3D"false">=20
+<a style=3D"text-decoration: none;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKDy6o2tSj2i10uadFiRgHMJ0kx7k3g=
+Lfysp22z3UWkeI0rvP6CtXbVNPfbCpUp9NqyuI=3D" target=3D"_blank"
+> <img style=3D"display: block; vertical-align: top; max-width: 100%; heigh=
+t: auto;" src=3D"https://info.a16z.com/rs/382-JZB-798/images/podcast-white-=
+ico@2x--newsletter-09-29-020.png" alt=3D"podcast icon" width=3D"12" border=
+=3D"0" /> </a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"footerSep02" width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" bgcolor=3D"#4c4f53">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 30px;" height=3D"30"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"footerAddress" width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" bgcolor=3D"#4c4f53">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding: 0 15px; padding-top: 2px;">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr align=3D"center">=20
+<td class=3D"flex pb-13" style=3D"padding: 0 5px" valign=3D"top">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font:700 10px/116% Proxima Nova, Arial, Helvetica, sans-serif;=
+ color: #a0a3a9; text-transform: uppercase; padding-bottom: 2px;" align=3D"=
+center">=20
+<div class=3D"mktoText" id=3D"footerAddressTitle">=20
+<p>MENLO PARK</p>=20
+</div></td>=20
+</tr>=20
+<tr>=20
+<td class=3D"lh-116" style=3D"font:600 10px/12px Proxima Nova, Arial, Helve=
+tica, sans-serif; color: #d0d1db; letter-spacing: 0.02em;" align=3D"center"=
+>=20
+<div class=3D"mktoText" id=3D"footerAddress01">
+ 2865 Sand Hill Road, Suite 101=20
+<br /> Menlo Park, CA 94025=20
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td class=3D"flex pb-12" style=3D"padding: 0 5px" valign=3D"top">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font:700 10px/116% Proxima Nova, Arial, Helvetica, sans-serif;=
+ color: #a0a3a9; text-transform: uppercase; padding-bottom: 2px;" align=3D"=
+center">=20
+<div class=3D"mktoText" id=3D"footerAddressTitle02">=20
+<p>MIAMI</p>=20
+</div></td>=20
+</tr>=20
+<tr>=20
+<td class=3D"lh-116" style=3D"font:600 10px/12px Proxima Nova, Arial, Helve=
+tica, sans-serif; color: #d0d1db; letter-spacing: 0.02em;" align=3D"center"=
+>=20
+<div class=3D"mktoText" id=3D"footerAddress02">=20
+<p>2340 Collins Ave, Ste 502<br /> Miami Beach, FL 33139</p>=20
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td class=3D"flex pb-12" style=3D"padding: 0 5px" valign=3D"top">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font:700 10px/116% Proxima Nova, Arial, Helvetica, sans-serif;=
+ color: #a0a3a9; text-transform: uppercase; padding-bottom: 2px;" align=3D"=
+center">=20
+<div class=3D"mktoText" id=3D"footerAddressTitle03">=20
+<p>NEW YORK CITY</p>=20
+</div></td>=20
+</tr>=20
+<tr>=20
+<td class=3D"lh-116" style=3D"font:600 10px/12px Proxima Nova, Arial, Helve=
+tica, sans-serif; color: #d0d1db; letter-spacing: 0.02em;" align=3D"center"=
+>=20
+<div class=3D"mktoText" id=3D"footerAddress03">=20
+<p>200 Lafayette Street, Third Floor<br /> New York, NY 10012</p>=20
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+<td class=3D"flex pb-12" style=3D"padding: 0 5px" valign=3D"top">=20
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font:700 10px/116% Proxima Nova, Arial, Helvetica, sans-serif;=
+ color: #a0a3a9; text-transform: uppercase; padding-bottom: 2px;" align=3D"=
+center">=20
+<div class=3D"mktoText" id=3D"footerAddressTitle04">=20
+<p>SAN FRANCISCO</p>=20
+</div></td>=20
+</tr>=20
+<tr>=20
+<td class=3D"lh-116" style=3D"font:600 10px/12px Proxima Nova, Arial, Helve=
+tica, sans-serif; color: #d0d1db; letter-spacing: 0.02em;" align=3D"center"=
+>=20
+<div class=3D"mktoText" id=3D"footerAddress04">=20
+<p>180 Townsend Street<br /> San Francisco, CA 94107</p>=20
+</div></td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"footerSep03" width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" bgcolor=3D"#4c4f53">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 25px;" height=3D"25"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"footerUnsubscribeBlock" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#4c4f53">=20
+<tbody>=20
+<tr>=20
+<td>=20
+<table style=3D"margin-left: auto; margin-right: auto;" cellspacing=3D"0" c=
+ellpadding=3D"0" align=3D"center">=20
+<tbody>=20
+<tr class=3D"table-holder" align=3D"center">=20
+<td class=3D"tfoot">=20
+<table class=3D"table-center w-auto" width=3D"100%" cellspacing=3D"0" cellp=
+adding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"fz-11" style=3D"font: 9px/143% Proxima Nova, Arial, Helvetica,=
+ sans-serif; color: #e5e6e5;" valign=3D"top">=20
+<div class=3D"mktoText" id=3D"footerCopyrights">=20
+<p>2024 Andreessen Horowitz. All rights reserved.</p>=20
+</div> </td>=20
+<td class=3D"hide" style=3D"font: 9px/143% Proxima Nova, Arial, Helvetica, =
+sans-serif; color: #e5e6e5; padding: 0 6px;" valign=3D"top">=E2=80=A2</td>=
+=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+<td class=3D"thead">=20
+<table class=3D"table-center w-auto" width=3D"100%" cellspacing=3D"0" cellp=
+adding=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"fz-11 pb-5" style=3D"font: 9px/143% Proxima Nova, Arial, Helve=
+tica, sans-serif; color: #e5e6e5;" valign=3D"top">=20
+<div class=3D"mktoText" id=3D"footerUpdateEmailPref">=20
+<a style=3D"text-decoration: underline; color: #e5e6e5;" href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD6YyqFV-9rD1ZlWz1yLY5SQsu6YWy=
+mdEO9zi7236BBlWW16tU2bFeba4V7KmCUB3_Ts=3D" target=3D"_blank"
+>Update email preferences</a>=20
+</div> </td>=20
+<td class=3D"fz-11 px-9" style=3D"font: 9px/143% Proxima Nova, Arial, Helve=
+tica, sans-serif; color: #e5e6e5; padding: 0 7px;" valign=3D"top">=E2=80=A2=
+</td>=20
+<td class=3D"fz-11 pb-5" style=3D"font: 9px/143% Proxima Nova, Arial, Helve=
+tica, sans-serif; color: #e5e6e5;" valign=3D"top">=20
+<div class=3D"mktoText" id=3D"footerUnsubscribe">=20
+<a style=3D"text-decoration: underline; color: #e5e6e5;" href=3D"https://in=
+fo.a16z.com/UnsubscribePage.html?mkt_unsubscribe=3D1&mkt_tok=3DMzgyLUpaQi03=
+OTgAAAGQ1kCKEC74E3h3IuVO8cTOeKKn9hnB3c87HGUMDIqMjeDRzYSiG9JGavcb5zRIbwWEE-C=
+ZXZcjRo30yXphGFWm-uuYdqtHq5DjVHjfaxkCEw" target=3D"_blank">Unsubscribe from=
+ list</a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"footerSep04" width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" bgcolor=3D"#4c4f53">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 1px; line-height: 1px; height: 35px;" height=3D"35"=
+>&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--[if mso]>
+=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09<![endif]-->=20
+</div>=20
+</center> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> =20
+<a href=3D
+"https://go2.a16z.com/MzgyLUpaQi03OTgAAAGQ1kCKD08hyC8btw4x5z9AAGmNF9t9rIKo2=
+giW_igshpjpiczjHNG7CMmGc69nDi-fO1cdQ3c=3D"
+></a>
+<img src=3D"https://go2.a16z.com/trk?t=3D1&mid=3DMzgyLUpaQi03OTgAAAGQ1kCKEE=
+dMw8lQ_iXd5KQxKK2L8_UtPk65UK0qgUH4Il6jXU4wMOqOCvduz9VhzkSofiecLK2vAnzf0y86N=
+mdhUCJIgVmKnoW88Ya-FEdT7Rde3AIOlzqx-_PPG9x9VJzG9qWSUVCC3Q" width=3D"1" heig=
+ht=3D"1" style=3D"display:none !important;" alt=3D"" />
+</body>
+</html>
+------=_Part_158537928_1005536392.1706029472285--
