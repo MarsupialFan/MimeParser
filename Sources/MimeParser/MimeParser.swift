@@ -91,7 +91,7 @@ public class MimeParser {
     //
     // Init with the contents of a file
     //
-    init?(for fileURL: URL) {
+    public init?(for fileURL: URL) {
         do {
             let content = try String(contentsOf: fileURL)
             mimeReader = MimeReader(from: content)
@@ -104,7 +104,7 @@ public class MimeParser {
     //
     // Init with the contents of a string
     //
-    init(from mimeString: String) {
+    public init(from mimeString: String) {
         mimeReader = MimeReader(from: mimeString)
     }
 
@@ -250,7 +250,7 @@ public class MimeParser {
     //
     // Top-level parse function
     //
-    func parse() throws -> MimeArchive {
+    public func parse() throws -> MimeArchive {
         // Parse the header of the archive
         guard let header = try parseHeader(isDocumentHeader: true) else {
             logger.error("\(#function): document header not found, aborting...")
