@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Header {
+public class Header {
     enum ContentTransferEncoding {
         case passThrough      // no encoding; this is the default value
         case quotedPrintable

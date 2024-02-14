@@ -85,7 +85,7 @@ enum MimeParserError: Error {
 }
 
 
-class MimeParser {
+public class MimeParser {
     let mimeReader: MimeReader
 
     //
