@@ -11,8 +11,8 @@ import Foundation
 // Represents one section/file/part (header + non-multipart body) of a mime archive
 //
 public class MimeArchiveResource {
-    let header: Header
-    let body: Data
+    public let header: Header
+    public let body: Data
 
     init(header: Header, body: Data) {
         self.header = header
@@ -24,8 +24,8 @@ public class MimeArchiveResource {
 // In-memory representation of a mime archive
 //
 public class MimeArchive {
-    let mainResource: MimeArchiveResource
-    var subResources: [MimeArchiveResource]  // For multipart mime archives
+    public let mainResource: MimeArchiveResource
+    public var subResources: [MimeArchiveResource]  // For multipart mime archives
 
     init(mainResource: MimeArchiveResource, subResources: [MimeArchiveResource] = []) {
         self.mainResource = mainResource

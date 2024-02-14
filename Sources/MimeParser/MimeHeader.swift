@@ -8,19 +8,19 @@
 import Foundation
 
 public class Header {
-    enum ContentTransferEncoding {
+    public enum ContentTransferEncoding {
         case passThrough      // no encoding; this is the default value
         case quotedPrintable
         case base64
         case other
     }
 
-    let mimeVersion: String?
-    let contentType: String
-    let contentSubtype: String
+    public let mimeVersion: String?
+    public let contentType: String
+    public let contentSubtype: String
     let boundary: String?
-    let contentLocation: String?
-    let contentTransferEncoding: ContentTransferEncoding
+    public let contentLocation: String?
+    public let contentTransferEncoding: ContentTransferEncoding
 
     static let multipartHeaderType = "multipart"
 
