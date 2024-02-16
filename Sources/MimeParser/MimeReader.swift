@@ -33,39 +33,48 @@ class MimeReader {
 
 
     //
+    // Runs the given regex match 'closure'; updates the reading pointer if the match succeeds.
+    //
     // Returns:
     //    - nil if the reading pointer is at end-of-archive.
     //    - The found match, otherwise
     //
     // Throws:
     //    - noMatchFound if not at end-of-archive and 'regex' was not found.
-    //    - any other exception thrown by Regex.firstMatch
+    //    - propagates exceptions thrown by 'closure'
     //
-    private func firstMatch<T>(_ regex: Regex<T>) throws -> Regex<T>.Match? {
+    private func execMatchClosure<T>(_ closure: () throws -> Regex<T>.Match?) throws -> Regex<T>.Match? {
         // First check for end-of-archive
         if readingPointer >= mimeContentEnd {
             return nil
         }
 
         // Perform the regex match
-        let searchRange = Range<String.Index>(uncheckedBounds: (readingPointer, mimeContentEnd))
-        let substringToBeSearched: Substring = mimeContent[searchRange]
         do {
-            guard let match = try regex.firstMatch(in: substringToBeSearched) else {
-                logger.info("\(#function): no match found")
+            guard let match = try closure() else {
                 throw MimeReaderError.noMatchFound
             }
             readingPointer = match.range.upperBound  // move reading pointer past 'line'
             return match
-        } catch {
-            logger.error("\(#function): Exception matching regex. Error: \(error.localizedDescription)")
-            throw error
         }
     }
 
+    private func firstMatch<T>(_ regex: Regex<T>) throws -> Regex<T>.Match? {
+        let searchRange = Range<String.Index>(uncheckedBounds: (readingPointer, mimeContentEnd))
+        let substringToBeSearched: Substring = mimeContent[searchRange]
+        return try execMatchClosure({ try regex.firstMatch(in: substringToBeSearched) })
+    }
 
-    let headerFieldRegex = #/^(\w[\w-]*:\s.*)(\n|\r\n|$)/#  // TODO: comply with the characters allowed by the spec
-    let foldedLineRegex = #/^([ \t].*)(\n|\r\n|$)/#
+
+    private func prefixMatch<T>(_ regex: Regex<T>, isPrefix: Bool = false) throws -> Regex<T>.Match? {
+        let searchRange = Range<String.Index>(uncheckedBounds: (readingPointer, mimeContentEnd))
+        let substringToBeSearched: Substring = mimeContent[searchRange]
+        return try execMatchClosure({ substringToBeSearched.prefixMatch(of: regex) })
+    }
+
+
+    let headerFieldRegex = #/(\w[\w-]*:\s.*)(\n|\r\n|$)/#  // TODO: comply with the characters allowed by the spec
+    let foldedLineRegex = #/([ \t].*)(\n|\r\n|$)/#
 
     //
     // Returns:
@@ -80,7 +89,7 @@ class MimeReader {
 
         // Read the next header field line
         do {
-            let match = try firstMatch(headerFieldRegex)
+            let match = try prefixMatch(headerFieldRegex)
             guard let headerFieldMatch = match else {
                 // End-of-archive reached
                 return nil
@@ -93,7 +102,7 @@ class MimeReader {
         // Add any folded lines
         while true {
             do {
-                let match = try firstMatch(foldedLineRegex)
+                let match = try prefixMatch(foldedLineRegex)
                 guard let foldedLineMatch = match else {
                     break
                 }
@@ -208,7 +217,7 @@ class MimeReader {
     }
 
 
-    let emptyLineRegex = #/^(\n|\r\n|$)/#  // not including the old Mac "\r" option
+    let emptyLineRegex = #/(\n|\r\n|$)/#  // not including the old Mac "\r" option
 
     //
     // Returns the substring starting with the reading pointer and ending with
@@ -216,7 +225,7 @@ class MimeReader {
     //
     func readBody() throws -> Substring {
         // The body must be separated from the header by an empty line
-        guard let _ = try firstMatch(emptyLineRegex) else {
+        guard let _ = try prefixMatch(emptyLineRegex) else {
             // Reached end-of-archive
             return ""
         }

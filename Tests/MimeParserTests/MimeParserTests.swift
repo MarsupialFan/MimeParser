@@ -132,7 +132,7 @@ final class MimeParserTests: XCTestCase {
         }
     }
 
-    func testParseSimpleMesssge() throws {
+    func testParseTestFiles() throws {
         struct TestFile {
             let fileName: String
             let nMultipartParts: Int
