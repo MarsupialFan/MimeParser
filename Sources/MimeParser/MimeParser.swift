@@ -86,26 +86,25 @@ enum MimeParserError: Error {
 
 
 public class MimeParser {
-    let mimeReader: MimeReader
+    let stringReader: StringReader
+    let headerReader: HeaderReader
+
 
     //
     // Init with the contents of a file
     //
-    public init?(for fileURL: URL) {
-        do {
-            let content = try String(contentsOf: fileURL)
-            mimeReader = MimeReader(from: content)
-        } catch {
-            logger.error("Failed to read content of file \(fileURL.path()) (error: \(error.localizedDescription))")
-            return nil
-        }
+    class func mimeParserForFile(_ fileURL: URL) throws -> MimeParser {
+        let content = try String(contentsOf: fileURL)
+        return MimeParser(from: content)
     }
+
 
     //
     // Init with the contents of a string
     //
     public init(from mimeString: String) {
-        mimeReader = MimeReader(from: mimeString)
+        self.stringReader = StringReader(from: mimeString)
+        self.headerReader = HeaderReader(from: stringReader)
     }
 
 
@@ -161,7 +160,7 @@ public class MimeParser {
         var contentTransferEncoding: String? = nil
         var contentLocation: String? = nil
 
-        guard let headerFields = try mimeReader.readHeader() else {
+        guard let headerFields = try headerReader.readHeader() else {
             return nil
         }
         for headerField in headerFields {
@@ -212,7 +211,8 @@ public class MimeParser {
     //
     private func parseBody(with encoding: Header.ContentTransferEncoding) throws -> String {
         // Read the encoded body into a string
-        let encodedBody = try String(mimeReader.readBody())
+        let bodyReader = BodyReader(from: stringReader)
+        let encodedBody = try String(bodyReader.readBody())
 
         return try decode(encodedBody, with: encoding)
     }
@@ -222,7 +222,8 @@ public class MimeParser {
     // Parse a multipart body
     //
     private func parseMultipartBody(boundary: String) throws -> [MimeArchiveResource] {
-        try mimeReader.skipToMultipartBodyStart(boundary: boundary)
+        let multipartBodyReader = MultipartBodyReader(with: boundary, using: stringReader)
+        try multipartBodyReader.skipToMultipartBodyStart()
 
         // Parse the parts
         var parts: [MimeArchiveResource] = []  // return value
@@ -234,7 +235,7 @@ public class MimeParser {
             }
 
             // Parse the part's body
-            let (partBody, isClosingDelimiter) = try mimeReader.readPartBody(boundary: boundary)
+            let (partBody, isClosingDelimiter) = try multipartBodyReader.readPartBody(boundary: boundary)
             let decodedBody = try decode(String(partBody), with: partHeader.contentTransferEncoding)
 
             parts.append(MimeArchiveResource(header: partHeader, body: Data(decodedBody.utf8)))

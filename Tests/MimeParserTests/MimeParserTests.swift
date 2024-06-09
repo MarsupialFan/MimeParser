@@ -148,11 +148,9 @@ final class MimeParserTests: XCTestCase {
             let filePath = try MyAssertNotNil(
                 Bundle.module.url(forResource: testFile.fileName, withExtension: "txt"),
                 "Failed to get file URL", file: #file, line: #line)
-            let mimeParser = try MyAssertNotNil(
-                MimeParser(for: filePath),
-                "Failed to get instantiate MimeParser", file: #file, line: #line)
+            let mimeParser = MyAssertNoThrow(try MimeParser.mimeParserForFile(filePath), initVal: nil)
             XCTAssertNotNil(mimeParser)
-            let mimeArchive = MyAssertNoThrow(try mimeParser.parse(), "Failed to parse", file: #file, line: #line, initVal: nil)
+            let mimeArchive = MyAssertNoThrow(try mimeParser!.parse(), "Failed to parse", file: #file, line: #line, initVal: nil)
             XCTAssertNotNil(mimeArchive)
             XCTAssertEqual(mimeArchive!.subResources.count, testFile.nMultipartParts)
         }
