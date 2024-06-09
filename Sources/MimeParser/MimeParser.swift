@@ -93,7 +93,7 @@ public class MimeParser {
     //
     // Init with the contents of a file
     //
-    class func mimeParserForFile(_ fileURL: URL) throws -> MimeParser {
+    public class func mimeParserForFile(_ fileURL: URL) throws -> MimeParser {
         let content = try String(contentsOf: fileURL)
         return MimeParser(from: content)
     }
