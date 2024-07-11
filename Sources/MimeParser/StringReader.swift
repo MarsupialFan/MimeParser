@@ -14,16 +14,12 @@ enum StringReaderError: Error {
 
 
 class StringReader {
-    let string: String                // the string to be read
-    var readingPointer: String.Index  // read location marker
-    let endPointer: String.Index      // marks the end of 'string'
+    var string: String                // the string to be read
 
     var multipartDelimiterRegex: Regex<(Substring, Substring)>? = nil
 
     init(from string: String) {
         self.string = string
-        self.readingPointer = self.string.startIndex
-        self.endPointer = self.string.endIndex
     }
 
 
@@ -40,7 +36,7 @@ class StringReader {
     //
     private func execMatchClosure<T>(_ closure: () throws -> Regex<T>.Match?) throws -> Regex<T>.Match? {
         // First check for end-of-archive
-        if readingPointer >= endPointer {
+        if self.string.isEmpty {
             return nil
         }
 
@@ -49,30 +45,25 @@ class StringReader {
             guard let match = try closure() else {
                 throw StringReaderError.noMatchFound
             }
-            readingPointer = match.range.upperBound  // move reading pointer past 'line'
+            self.string = String(self.string.suffix(from: match.range.upperBound))
             return match
         }
     }
 
 
     func firstMatch<T>(_ regex: Regex<T>) throws -> Regex<T>.Match? {
-        let searchRange = Range<String.Index>(uncheckedBounds: (readingPointer, endPointer))
-        let substringToBeSearched: Substring = string[searchRange]
-        return try execMatchClosure({ try regex.firstMatch(in: substringToBeSearched) })
+        return try execMatchClosure({ try regex.firstMatch(in: self.string) })
     }
 
 
     func prefixMatch<T>(_ regex: Regex<T>, isPrefix: Bool = false) throws -> Regex<T>.Match? {
-        let searchRange = Range<String.Index>(uncheckedBounds: (readingPointer, endPointer))
-        let substringToBeSearched: Substring = string[searchRange]
-        return try execMatchClosure({ substringToBeSearched.prefixMatch(of: regex) })
+        return try execMatchClosure({ self.string.prefixMatch(of: regex) })
     }
 
 
-    func getRemainingSuffix() -> Substring {
-        let remainingRange = Range<String.Index>(uncheckedBounds: (readingPointer, endPointer))
-        let remainingSuffix: Substring = string[remainingRange]
-        readingPointer = endPointer
+    func getRemainingSuffix() -> String {
+        let remainingSuffix = self.string
+        self.string = ""
         return remainingSuffix
     }
 }

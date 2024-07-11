@@ -20,10 +20,9 @@ class BodyReader {
 
 
     //
-    // Returns the substring starting with the reading pointer and ending with
-    // the given delimiter.
+    // Returns the suffix starting with an empty line.
     //
-    func readBody() throws -> Substring {
+    func readBody() throws -> String {
         // The body must be separated from the header by an empty line
         guard let _ = try stringReader.prefixMatch(emptyLineRegex) else {
             // Reached end-of-archive

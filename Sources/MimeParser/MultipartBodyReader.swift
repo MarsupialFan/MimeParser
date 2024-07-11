@@ -26,6 +26,7 @@ class MultipartBodyReader {
     let transportPadding = "[ \t]*"
     let delimiterOrCloseDelimiterSuffix: String
     let partBoundaryRegexStr: String
+    let bodyRegexStr: String
 
 
     init(with boundary: String, using stringReader: StringReader) {
@@ -33,7 +34,12 @@ class MultipartBodyReader {
         self.boundary = boundary
         self.dashBoundary = extraDashes + boundary
         self.delimiterOrCloseDelimiterSuffix = "([ \t]*\n|[ \t]*\r\n|\(extraDashes))"
-        self.partBoundaryRegexStr = "^(?s)(.*?)" + crlf + dashBoundary + delimiterOrCloseDelimiterSuffix  // the (?s) flag allows "." to match newline, ".*?" means non-greedy
+
+        // Regex strings
+        //   "(?s)" is flag which allows "." to match newline
+        //   ".*?" means non-greedy
+        self.partBoundaryRegexStr = "(?s)(.*?)" + crlf + dashBoundary + delimiterOrCloseDelimiterSuffix
+        self.bodyRegexStr = "^(?s)\(crlf)(.*)$"
     }
 
 
@@ -57,7 +63,7 @@ class MultipartBodyReader {
         let partBoundaryRegex = try Regex(partBoundaryRegexStr)  // TODO: move to ctor
 
         // Perform the boundary match
-        guard let match = try stringReader.firstMatch(partBoundaryRegex) else {
+        guard let match = try stringReader.prefixMatch(partBoundaryRegex) else {
             logger.error("\(#function): part boundary not found")
             throw MultipartBodyReaderError.missingPartBoundary
         }
@@ -78,8 +84,7 @@ class MultipartBodyReader {
             return ("", isClosingDelimiter)
         }
 
-        let bodyMatchStr = "^(?s)\(crlf)(.*)$"             // the (?s) flag allows "." to match newline
-        let bodyMatchRegex = try Regex(bodyMatchStr)       // TODO: move to constructor
+        let bodyMatchRegex = try Regex(self.bodyRegexStr)       // TODO: move to constructor
         guard let bodyMatch = try bodyMatchRegex.wholeMatch(in: crlfPartBody) else {
             logger.error("\(#function): part body not found")
             throw MultipartBodyReaderError.partBodyNotFound
