@@ -222,7 +222,7 @@ public class MimeParser {
     // Parse a multipart body
     //
     private func parseMultipartBody(boundary: String) throws -> [MimeArchiveResource] {
-        let multipartBodyReader = MultipartBodyReader(with: boundary, using: stringReader)
+        let multipartBodyReader = try MultipartBodyReader(with: boundary, using: stringReader)
         try multipartBodyReader.skipToMultipartBodyStart()
 
         // Parse the parts

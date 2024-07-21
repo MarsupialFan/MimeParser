@@ -34,10 +34,10 @@ class StringReader {
     //    - noMatchFound if not at end-of-archive and 'regex' was not found.
     //    - propagates exceptions thrown by 'closure'
     //
-    private func execMatchClosure<T>(_ closure: () throws -> Regex<T>.Match?) throws -> Regex<T>.Match? {
+    private func execMatchClosure<T>(_ closure: () throws -> Regex<T>.Match?) throws -> (Substring, Regex<T>.Match?) {
         // First check for end-of-archive
         if self.string.isEmpty {
-            return nil
+            return ("", nil)
         }
 
         // Perform the regex match
@@ -45,19 +45,21 @@ class StringReader {
             guard let match = try closure() else {
                 throw StringReaderError.noMatchFound
             }
+            let prefix = self.string[..<match.range.lowerBound]
             self.string = String(self.string.suffix(from: match.range.upperBound))
-            return match
+            return (prefix, match)
         }
     }
 
 
-    func firstMatch<T>(_ regex: Regex<T>) throws -> Regex<T>.Match? {
+    func firstMatch<T>(_ regex: Regex<T>) throws -> (Substring, Regex<T>.Match?) {
         return try execMatchClosure({ try regex.firstMatch(in: self.string) })
     }
 
 
     func prefixMatch<T>(_ regex: Regex<T>, isPrefix: Bool = false) throws -> Regex<T>.Match? {
-        return try execMatchClosure({ self.string.prefixMatch(of: regex) })
+        let (_, match) =  try execMatchClosure({ self.string.prefixMatch(of: regex) })
+        return match
     }
 
 

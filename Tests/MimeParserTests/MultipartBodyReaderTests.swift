@@ -25,7 +25,7 @@ final class MultipartBodyReaderTests: XCTestCase {
                     let mimeEntries = addEndOfHeaderMarker(header) + body
                     let mime = (mimeEntries.map { $0.text(eol: eol) }).joined()
                     let stringReader = StringReader(from: mime)
-                    let multipartBodyReader = MultipartBodyReader(with: boundary, using: stringReader)
+                    let multipartBodyReader = try MultipartBodyReader(with: boundary, using: stringReader)
                     XCTAssertNoThrow(try multipartBodyReader.skipToMultipartBodyStart())
                 }
             }

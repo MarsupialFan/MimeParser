@@ -13,6 +13,8 @@ enum MultipartBodyReaderError: Error {
     case matchError
     case missingMultipartBodyStartMarker
     case missingPartBoundary
+    case missingStartingCrlf
+    case missingTrailingCrlf
 }
 
 
@@ -25,33 +27,30 @@ class MultipartBodyReader {
     let extraDashes = "--"
     let transportPadding = "[ \t]*"
     let delimiterOrCloseDelimiterSuffix: String
-    let partBoundaryRegexStr: String
-    let bodyRegexStr: String
 
+    let multipartBodyStartRegex: Regex<AnyRegexOutput>
+    let partBoundaryRegex: Regex<AnyRegexOutput>
 
-    init(with boundary: String, using stringReader: StringReader) {
+    init(with boundary: String, using stringReader: StringReader) throws {
         self.stringReader = stringReader
         self.boundary = boundary
         self.dashBoundary = extraDashes + boundary
         self.delimiterOrCloseDelimiterSuffix = "([ \t]*\n|[ \t]*\r\n|\(extraDashes))"
 
-        // Regex strings
-        //   "(?s)" is flag which allows "." to match newline
-        //   ".*?" means non-greedy
-        self.partBoundaryRegexStr = "(?s)(.*?)" + crlf + dashBoundary + delimiterOrCloseDelimiterSuffix
-        self.bodyRegexStr = "^(?s)\(crlf)(.*)$"
+        // Regex preparation
+        self.multipartBodyStartRegex = try Regex(crlf + dashBoundary + transportPadding + crlf)
+        self.partBoundaryRegex = try Regex(dashBoundary + delimiterOrCloseDelimiterSuffix)
     }
 
 
     // TODO: allow mime nesting once the \r\n issue is fixed
     func skipToMultipartBodyStart() throws {
-        let multipartBodyStartRegex = try Regex(crlf + dashBoundary + transportPadding + crlf)
-        guard let _ = try stringReader.firstMatch(multipartBodyStartRegex) else {
+        let (_, match) = try stringReader.firstMatch(multipartBodyStartRegex)
+        if match == nil {
             logger.error("\(#function): failed to find multipart body start marker")
             throw MultipartBodyReaderError.missingMultipartBodyStartMarker
         }
     }
-
 
     //
     // TODO: Simplify the following once the \r?\n issue is resolved:
@@ -59,41 +58,39 @@ class MultipartBodyReader {
     //       - call self.firstMatch directly
     //
     func readPartBody(boundary: String) throws -> (Substring, Bool) {
-        // Prepare the boundary regex
-        let partBoundaryRegex = try Regex(partBoundaryRegexStr)  // TODO: move to ctor
-
         // Perform the boundary match
-        guard let match = try stringReader.prefixMatch(partBoundaryRegex) else {
+        let (crlfPartBodyCrlf, optionalMatch) = try stringReader.firstMatch(partBoundaryRegex)
+        guard let match = optionalMatch else {
             logger.error("\(#function): part boundary not found")
             throw MultipartBodyReaderError.missingPartBoundary
         }
 
         // Check if this is the end of the multipart body
-        guard let delimiterSuffix = match[3].substring else {
-            logger.error("\(#function): match 3 error")
+        guard let delimiterSuffix = match[1].substring else {
+            logger.error("\(#function): delimiter suffix match error")
             throw MultipartBodyReaderError.matchError
         }
         let isClosingDelimiter = delimiterSuffix.starts(with: extraDashes)
 
-        // Find the body
-        guard let crlfPartBody = match[1].substring else {
-            logger.error("\(#function): match 1 error")
-            throw MultipartBodyReaderError.matchError
+        // Drop trailing crlf
+        let lastCharacter = crlfPartBodyCrlf.last
+        if lastCharacter == nil || (lastCharacter != "\n"  && lastCharacter != "\r\n") {
+            logger.error("\(#function): missing trailing CRLF")
+            throw MultipartBodyReaderError.missingTrailingCrlf
         }
+        let crlfPartBody = crlfPartBodyCrlf.dropLast()
+
+        // Cover the case of an empty body
         if crlfPartBody.isEmpty {
             return ("", isClosingDelimiter)
         }
 
-        let bodyMatchRegex = try Regex(self.bodyRegexStr)       // TODO: move to constructor
-        guard let bodyMatch = try bodyMatchRegex.wholeMatch(in: crlfPartBody) else {
-            logger.error("\(#function): part body not found")
-            throw MultipartBodyReaderError.partBodyNotFound
+        // Drop starting crlf
+        let firstCharacter = crlfPartBody.first
+        if firstCharacter == nil || (firstCharacter != "\n"  && firstCharacter != "\r\n") {
+            logger.error("\(#function): missing starting CRLF")
+            throw MultipartBodyReaderError.missingStartingCrlf
         }
-        guard let partBody = bodyMatch[2].substring else {
-            logger.error("\(#function): body match error")
-            throw MultipartBodyReaderError.matchError
-        }
-
-        return (partBody, isClosingDelimiter)
+        return (crlfPartBody.dropFirst(), isClosingDelimiter)
     }
 }
