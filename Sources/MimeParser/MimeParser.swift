@@ -118,9 +118,13 @@ public class MimeParser {
                 logger.error("\(#function): failed to covert to Data")
                 throw MimeParserError.bodyConversionFailure
             }
-            guard let decodedBody = String(data: encodedData, encoding: .ascii) else {
-                logger.error("\(#function): failed to base64-decode")
-                throw MimeParserError.decodingFailure
+            guard let decodedBody = String(data: encodedData, encoding: .utf8) else {
+                // If UTF-8 fails, try ISO Latin 1 as a fallback
+                guard let fallbackDecodedBody = String(data: encodedData, encoding: .isoLatin1) else {
+                    logger.error("\(#function): failed to base64-decode")
+                    throw MimeParserError.decodingFailure
+                }
+                return fallbackDecodedBody
             }
             return decodedBody
         case .quotedPrintable:
